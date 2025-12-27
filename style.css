@@ -1,0 +1,143 @@
+/* Base Resets */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    z-index: 100;
+}
+
+nav .logo { font-weight: 700; letter-spacing: -0.5px; font-size: 1.2rem; }
+nav ul { display: flex; gap: 2rem; }
+nav a:hover { color: #888; }
+
+/* Hero Section */
+.hero {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.filter-buttons button {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #888;
+    padding-bottom: 2px;
+}
+
+.filter-buttons button:hover, 
+.filter-buttons button.active {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 3rem; /* Space between projects */
+}
+
+.project-card {
+    cursor: pointer;
+    /* Animation for filtering */
+    animation: fadeIn 0.5s ease; 
+}
+
+.project-card img {
+    width: 100%;
+    height: 300px; /* Fixed height for uniformity, or remove for masonry */
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+    filter: grayscale(100%); /* B&W initially */
+    transition: filter 0.4s ease;
+}
+
+.project-card:hover img {
+    filter: grayscale(0%); /* Color on hover */
+}
+
+.project-info h3 { font-size: 1.1rem; font-weight: 600; }
+.project-info p { font-size: 0.9rem; color: #666; }
+
+/* About Section */
+.about-section { margin-top: 5rem; border-top: 1px solid #eee; padding-top: 5rem; }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.btn-download {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    color: white;
+    font-weight: 500;
+}
+.btn-download:hover { background: #333; color: white; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+.socials { margin: 1rem 0; }
+.socials a { margin: 0 10px; text-decoration: underline; }
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .about-grid { grid-template-columns: 1fr; }
+    .portfolio-grid { grid-template-columns: 1fr; }
+}

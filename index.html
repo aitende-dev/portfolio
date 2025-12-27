@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Surname | Architecture Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">NAME SURNAME</div>
+        <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Designing spaces for the future.<br>Architecture Student based in [City].</h1>
+    </header>
+
+    <section id="work" class="container">
+        <div class="filter-buttons">
+            <button class="active" onclick="filterProjects('all')">All Work</button>
+            <button onclick="filterProjects('university')">University</button>
+            <button onclick="filterProjects('internship')">Internship</button>
+            <button onclick="filterProjects('personal')">Personal</button>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="project-card" data-category="university">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/600x400/cccccc/333333?text=Urban+Housing+Project" alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h3>Urban Housing</h3>
+                    <p>University &bull; 3rd Year</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="internship">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/600x800/dddddd/333333?text=Office+Renovation" alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h3>City Office Reno</h3>
+                    <p>Internship &bull; Studio X</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="personal">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/600x500/eeeeee/333333?text=Furniture+Design" alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h3>Chair Study</h3>
+                    <p>Personal Project</p>
+                </div>
+            </div>
+
+             <div class="project-card" data-category="university">
+                <div class="image-container">
+                    <img src="https://via.placeholder.com/600x400/cccccc/333333?text=Library+Concept" alt="Project 4">
+                </div>
+                <div class="project-info">
+                    <h3>Public Library</h3>
+                    <p>University &bull; Final Thesis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container about-section">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hello, I am an architecture student with a passion for sustainable urban planning and brutalist aesthetics. Currently studying at [University Name]. I have experience with AutoCAD, Rhino, and Revit.</p>
+                
+                <br>
+                
+                <div class="download-area">
+                    <p>Interested in my detailed technical drawings?</p>
+                    <a href="assets/My_Physical_Portfolio.pdf" download class="btn-download">
+                        Download Full Portfolio (PDF)
+                    </a>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://via.placeholder.com/400x500/333333/ffffff?text=Portrait" alt="Portrait">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Get in touch: email@example.com</p>
+        <div class="socials">
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p class="copyright">&copy; 2024 Name Surname</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
