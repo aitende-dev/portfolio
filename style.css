@@ -141,3 +141,99 @@ footer {
     .about-grid { grid-template-columns: 1fr; }
     .portfolio-grid { grid-template-columns: 1fr; }
 }
+
+/* --- CV / ABOUT PAGE STYLES --- */
+
+.cv-container {
+    max-width: 1000px; /* Slightly narrower for readability */
+    margin: 4rem auto;
+}
+
+.cv-header {
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #1a1a1a;
+}
+.cv-header h1 { font-size: 3rem; font-weight: 300; letter-spacing: -1px; }
+.cv-subtitle { color: #666; font-size: 1.1rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 2px;}
+
+/* Grid Layout */
+.cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Sidebar is 1 part, Main is 2 parts */
+    gap: 4rem;
+}
+
+/* Sidebar Styles */
+.profile-img-container img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%; /* Circular profile pic */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    filter: grayscale(100%);
+}
+
+.cv-section { margin-bottom: 3rem; }
+.cv-section h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.cv-sidebar p, .cv-sidebar li {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    list-style: none;
+}
+.cv-sidebar a { text-decoration: underline; }
+
+/* Main Content Styles */
+.cv-content-block { margin-bottom: 3rem; }
+.cv-content-block h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.cv-content-block p {
+    margin-bottom: 1rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Timeline/List items */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr; /* Date column vs Text column */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.timeline-item .date {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 1px solid #eee;
+}
+.timeline-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
+.timeline-item .small-text { font-size: 0.85rem; color: #666; margin-top: 0; }
+
+.divider {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 3rem 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cv-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .cv-header h1 { font-size: 2rem; }
+    .timeline-item { grid-template-columns: 1fr; }
+    .timeline-item .date { text-align: left; border: none; padding: 0; margin-bottom: 0.2rem; display: block;}
+}
