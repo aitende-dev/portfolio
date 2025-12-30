@@ -159,4 +159,123 @@ nav a:hover, nav a.active { color: #888; text-decoration: underline; }
 
 /* Main CV Content */
 .cv-content-block { margin-bottom: 3rem; }
-.cv-content-block h2 { font-size
+.cv-content-block h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem; }
+.cv-content-block p { margin-bottom: 1rem; color: #333; line-height: 1.7; }
+
+/* Timeline Items */
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.timeline-item .date {
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 500;
+    text-align: right;
+    padding-right: 1rem;
+    border-right: 1px solid #eee;
+}
+.timeline-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
+.timeline-item .small-text { font-size: 0.85rem; color: #666; margin-top: 0; }
+.divider { border: 0; border-top: 1px solid #eee; margin: 3rem 0; }
+
+/* =========================================
+   5. PROJECT PAGE STYLES (Detail + Gallery)
+   ========================================= */
+.project-intro { padding-top: 4rem; padding-bottom: 4rem; }
+
+.project-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+}
+.project-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+.project-description { font-size: 1.1rem; color: #333; line-height: 1.7; }
+.project-description h2 { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+
+.project-details {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 4px;
+    height: fit-content;
+}
+.detail-item { margin-bottom: 1.5rem; }
+.detail-item:last-child { margin-bottom: 0; }
+.detail-item h4 { font-size: 0.8rem; text-transform: uppercase; color: #888; margin-bottom: 0.2rem; }
+.detail-item p { font-weight: 600; font-size: 0.95rem; }
+
+/* Masonry Gallery (Museum Style) */
+.gallery-masonry {
+    column-count: 2; /* 2 Columns like a museum wall */
+    column-gap: 2rem;
+    margin-bottom: 4rem;
+}
+.gallery-masonry img {
+    width: 100%;
+    height: auto; /* Keeps original aspect ratio */
+    margin-bottom: 2rem;
+    display: block;
+    break-inside: avoid;
+    border-radius: 2px;
+}
+.gallery-masonry img:hover { opacity: 0.95; }
+
+/* Navigation Footer (Back Button) */
+.navigation-footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid #eee;
+    margin-top: 4rem;
+}
+.btn-back { font-weight: 600; border-bottom: 1px solid transparent; }
+.btn-back:hover { border-bottom: 1px solid #000; }
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #888;
+    font-size: 0.9rem;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+    margin-top: 2rem;
+}
+.socials { margin: 1rem 0; }
+.socials a { margin: 0 10px; text-decoration: underline; }
+
+/* =========================================
+   7. MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    
+    /* Grids become 1 column on mobile */
+    .about-grid, 
+    .cv-grid, 
+    .intro-grid, 
+    .portfolio-grid,
+    .timeline-item { 
+        grid-template-columns: 1fr; 
+        gap: 2rem; 
+    }
+
+    .gallery-masonry { column-count: 1; }
+    
+    .timeline-item .date { 
+        text-align: left; 
+        border: none; 
+        padding: 0; 
+        display: block; 
+        margin-bottom: 0.5rem;
+    }
+}
