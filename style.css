@@ -237,3 +237,91 @@ footer {
     .timeline-item { grid-template-columns: 1fr; }
     .timeline-item .date { text-align: left; border: none; padding: 0; margin-bottom: 0.2rem; display: block;}
 }
+
+/* --- UPDATED PROJECT PAGE STYLES --- */
+
+/* 1. Intro Section (Text + Details) */
+.project-intro {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.project-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+}
+.project-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Text takes 2/3, Details take 1/3 */
+    gap: 4rem;
+}
+
+.project-description { font-size: 1.1rem; color: #333; line-height: 1.7; }
+.project-description h2 { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+.project-description p { margin-bottom: 1.5rem; }
+
+.project-details {
+    background: #f9f9f9; /* Light grey box for details */
+    padding: 2rem;
+    border-radius: 4px;
+    height: fit-content;
+}
+
+.detail-item { margin-bottom: 1.5rem; }
+.detail-item:last-child { margin-bottom: 0; }
+.detail-item h4 { 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    color: #888; 
+    margin-bottom: 0.2rem; 
+}
+.detail-item p { font-weight: 600; font-size: 0.95rem; }
+
+/* 2. Horizontal Scroll Gallery */
+.gallery-section {
+    width: 100%;
+    background: #1a1a1a; /* Dark background for gallery */
+    padding: 2rem 0;
+    overflow: hidden; /* Hides the scrollbar on the main page */
+}
+
+.scroll-container {
+    display: flex; /* Lines images up horizontally */
+    gap: 2rem;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 0 2rem; /* Side padding */
+    scroll-snap-type: x mandatory; /* Makes it snap to images smoothly */
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
+}
+
+/* Hide scrollbar but keep functionality */
+.scroll-container::-webkit-scrollbar { display: none; }
+.scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+.scroll-container img {
+    height: 80vh; /* Images take up 80% of the screen height */
+    width: auto;  /* Width adjusts automatically */
+    max-width: none; /* Allows images to be wide */
+    object-fit: contain;
+    scroll-snap-align: center; /* Snaps image to center of screen */
+    border-radius: 2px;
+}
+
+.scroll-hint {
+    text-align: center;
+    color: #666;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .project-details { padding: 1.5rem; margin-top: 1rem; }
+    .scroll-container img { height: 50vh; /* Smaller on mobile */ }
+}
