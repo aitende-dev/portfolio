@@ -1,4 +1,6 @@
-/* Base Resets */
+/* =========================================
+   1. GLOBAL RESETS & TYPOGRAPHY
+   ========================================= */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -10,15 +12,18 @@ body {
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 ul { list-style: none; }
+img { display: block; max-width: 100%; }
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1200px; /* Standard width for main content */
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Navigation */
+/* =========================================
+   2. NAVIGATION
+   ========================================= */
 nav {
     display: flex;
     justify-content: space-between;
@@ -26,14 +31,17 @@ nav {
     padding: 2rem;
     position: sticky;
     top: 0;
-    background: rgba(255,255,255,0.95);
+    background: rgba(255,255,255,0.98); /* Slightly transparent white */
     z-index: 100;
 }
 
 nav .logo { font-weight: 700; letter-spacing: -0.5px; font-size: 1.2rem; }
 nav ul { display: flex; gap: 2rem; }
-nav a:hover { color: #888; }
+nav a:hover, nav a.active { color: #888; text-decoration: underline; }
 
+/* =========================================
+   3. HOME PAGE STYLES
+   ========================================= */
 /* Hero Section */
 .hero {
     padding: 8rem 2rem 4rem;
@@ -52,7 +60,6 @@ nav a:hover { color: #888; }
     display: flex;
     gap: 1.5rem;
 }
-
 .filter-buttons button {
     background: none;
     border: none;
@@ -62,53 +69,37 @@ nav a:hover { color: #888; }
     color: #888;
     padding-bottom: 2px;
 }
-
 .filter-buttons button:hover, 
 .filter-buttons button.active {
     color: #000;
     border-bottom: 1px solid #000;
 }
 
-/* Portfolio Grid */
+/* Portfolio Grid (Home Page) */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 3rem; /* Space between projects */
+    gap: 3rem; 
 }
-
 .project-card {
+    display: block;
     cursor: pointer;
-    /* Animation for filtering */
     animation: fadeIn 0.5s ease; 
 }
-
 .project-card img {
     width: 100%;
-    height: 300px; /* Fixed height for uniformity, or remove for masonry */
+    height: 300px; 
     object-fit: cover;
-    display: block;
     margin-bottom: 1rem;
-    filter: grayscale(100%); /* B&W initially */
+    filter: grayscale(100%); 
     transition: filter 0.4s ease;
+    border-radius: 2px;
 }
-
-.project-card:hover img {
-    filter: grayscale(0%); /* Color on hover */
-}
-
+.project-card:hover img { filter: grayscale(0%); }
 .project-info h3 { font-size: 1.1rem; font-weight: 600; }
 .project-info p { font-size: 0.9rem; color: #666; }
 
-/* About Section */
-.about-section { margin-top: 5rem; border-top: 1px solid #eee; padding-top: 5rem; }
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-}
-
+/* Download Button */
 .btn-download {
     display: inline-block;
     margin-top: 1rem;
@@ -116,38 +107,20 @@ nav a:hover { color: #888; }
     background: #1a1a1a;
     color: white;
     font-weight: 500;
+    border-radius: 2px;
 }
-.btn-download:hover { background: #333; color: white; }
+.btn-download:hover { background: #333; }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: #888;
-    font-size: 0.9rem;
-}
-.socials { margin: 1rem 0; }
-.socials a { margin: 0 10px; text-decoration: underline; }
-
-/* Animations */
+/* Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .about-grid { grid-template-columns: 1fr; }
-    .portfolio-grid { grid-template-columns: 1fr; }
-}
-
-/* --- CV / ABOUT PAGE STYLES --- */
-
-.cv-container {
-    max-width: 1000px; /* Slightly narrower for readability */
-    margin: 4rem auto;
-}
+/* =========================================
+   4. ABOUT PAGE STYLES (CV Layout)
+   ========================================= */
+.cv-container { max-width: 1000px; margin: 4rem auto; }
 
 .cv-header {
     margin-bottom: 4rem;
@@ -157,24 +130,22 @@ footer {
 .cv-header h1 { font-size: 3rem; font-weight: 300; letter-spacing: -1px; }
 .cv-subtitle { color: #666; font-size: 1.1rem; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 2px;}
 
-/* Grid Layout */
 .cv-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Sidebar is 1 part, Main is 2 parts */
+    grid-template-columns: 1fr 2fr; /* Sidebar 1/3, Main 2/3 */
     gap: 4rem;
 }
 
-/* Sidebar Styles */
+/* Sidebar */
 .profile-img-container img {
     width: 100%;
     max-width: 200px;
-    border-radius: 50%; /* Circular profile pic */
+    border-radius: 50%;
     aspect-ratio: 1/1;
     object-fit: cover;
     margin-bottom: 2rem;
     filter: grayscale(100%);
 }
-
 .cv-section { margin-bottom: 3rem; }
 .cv-section h3 {
     font-size: 0.9rem;
@@ -184,144 +155,8 @@ footer {
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.5rem;
 }
+.cv-sidebar p, .cv-sidebar li { font-size: 0.95rem; color: #444; line-height: 1.6; list-style: none; }
 
-.cv-sidebar p, .cv-sidebar li {
-    font-size: 0.95rem;
-    color: #444;
-    line-height: 1.6;
-    list-style: none;
-}
-.cv-sidebar a { text-decoration: underline; }
-
-/* Main Content Styles */
+/* Main CV Content */
 .cv-content-block { margin-bottom: 3rem; }
-.cv-content-block h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-}
-.cv-content-block p {
-    margin-bottom: 1rem;
-    color: #333;
-    line-height: 1.7;
-}
-
-/* Timeline/List items */
-.timeline-item {
-    display: grid;
-    grid-template-columns: 120px 1fr; /* Date column vs Text column */
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-.timeline-item .date {
-    font-size: 0.9rem;
-    color: #888;
-    font-weight: 500;
-    text-align: right;
-    padding-right: 1rem;
-    border-right: 1px solid #eee;
-}
-.timeline-item h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
-.timeline-item .small-text { font-size: 0.85rem; color: #666; margin-top: 0; }
-
-.divider {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 3rem 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .cv-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .cv-header h1 { font-size: 2rem; }
-    .timeline-item { grid-template-columns: 1fr; }
-    .timeline-item .date { text-align: left; border: none; padding: 0; margin-bottom: 0.2rem; display: block;}
-}
-
-/* --- UPDATED PROJECT PAGE STYLES --- */
-
-/* 1. Intro Section (Text + Details) */
-.project-intro {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-.project-header {
-    margin-bottom: 3rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 2rem;
-}
-.project-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-
-.intro-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Text takes 2/3, Details take 1/3 */
-    gap: 4rem;
-}
-
-.project-description { font-size: 1.1rem; color: #333; line-height: 1.7; }
-.project-description h2 { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
-.project-description p { margin-bottom: 1.5rem; }
-
-.project-details {
-    background: #f9f9f9; /* Light grey box for details */
-    padding: 2rem;
-    border-radius: 4px;
-    height: fit-content;
-}
-
-.detail-item { margin-bottom: 1.5rem; }
-.detail-item:last-child { margin-bottom: 0; }
-.detail-item h4 { 
-    font-size: 0.8rem; 
-    text-transform: uppercase; 
-    color: #888; 
-    margin-bottom: 0.2rem; 
-}
-.detail-item p { font-weight: 600; font-size: 0.95rem; }
-
-/* 2. Horizontal Scroll Gallery */
-.gallery-section {
-    width: 100%;
-    background: #1a1a1a; /* Dark background for gallery */
-    padding: 2rem 0;
-    overflow: hidden; /* Hides the scrollbar on the main page */
-}
-
-.scroll-container {
-    display: flex; /* Lines images up horizontally */
-    gap: 2rem;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    padding: 0 2rem; /* Side padding */
-    scroll-snap-type: x mandatory; /* Makes it snap to images smoothly */
-    -webkit-overflow-scrolling: touch; /* Smooth scroll on mobile */
-}
-
-/* Hide scrollbar but keep functionality */
-.scroll-container::-webkit-scrollbar { display: none; }
-.scroll-container { -ms-overflow-style: none; scrollbar-width: none; }
-
-.scroll-container img {
-    height: 80vh; /* Images take up 80% of the screen height */
-    width: auto;  /* Width adjusts automatically */
-    max-width: none; /* Allows images to be wide */
-    object-fit: contain;
-    scroll-snap-align: center; /* Snaps image to center of screen */
-    border-radius: 2px;
-}
-
-.scroll-hint {
-    text-align: center;
-    color: #666;
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .project-details { padding: 1.5rem; margin-top: 1rem; }
-    .scroll-container img { height: 50vh; /* Smaller on mobile */ }
-}
+.cv-content-block h2 { font-size
