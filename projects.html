@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Your Name</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html" style="border-bottom: 1px solid black;">Projects</a>
+        <a href="about.html">About & CV</a>
+    </nav>
+
+    <main>
+        <div class="projects-container">
+            
+            <div class="gallery-grid" id="gallery">
+                <div class="gallery-item" data-category="studio" onclick="window.location.href='project-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=800&auto=format&fit=crop" alt="Project 1">
+                    <div class="gallery-overlay">
+                        <h3>Urban Housing</h3>
+                        <p>Fall 2024</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="internship" onclick="window.location.href='project-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1488972685288-c3cc1579af33?q=80&w=800&auto=format&fit=crop" alt="Project 2">
+                    <div class="gallery-overlay">
+                        <h3>Office Refurb</h3>
+                        <p>Spring 2025</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="personal" onclick="window.location.href='project-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" alt="Project 3">
+                    <div class="gallery-overlay">
+                        <h3>Light Pavilion</h3>
+                        <p>2023</p>
+                    </div>
+                </div>
+
+                 <div class="gallery-item" data-category="other" onclick="window.location.href='project-detail.html'">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" alt="Project 4">
+                    <div class="gallery-overlay">
+                        <h3>Furniture Design</h3>
+                        <p>2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="filter-sidebar">
+                <div class="filter-categories">
+                    <h3>Categories</h3>
+                    <ul id="filters">
+                        <li class="active" data-filter="all">All Projects</li>
+                        <li data-filter="studio">Studio Work</li>
+                        <li data-filter="internship">Internship</li>
+                        <li data-filter="personal">Personal</li>
+                        <li data-filter="other">Other</li>
+                    </ul>
+                </div>
+                <div class="filter-description" id="filter-desc">
+                    <p>Select a category to view specific works.</p>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
