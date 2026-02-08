@@ -1,4 +1,4 @@
-/* General Reset */
+/* Core Reset */
 * { box-sizing: border-box; }
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -9,7 +9,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Fixed Navigation - Always on top */
+/* Navigation - Highest Priority */
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -19,7 +19,7 @@ body {
     top: 0;
     width: 100%;
     background: white;
-    z-index: 3000; /* Ensures nav is above the detail view */
+    z-index: 9999; /* Ensure links are clickable */
 }
 
 .logo { font-size: 1.5rem; cursor: pointer; }
@@ -32,7 +32,6 @@ body {
     position: relative;
 }
 
-/* Active indicator: Blue asterisk as requested */
 .nav-links a.active::after {
     content: '*';
     color: #3037ff; 
@@ -43,17 +42,14 @@ body {
     transform: translateX(-50%);
 }
 
-/* Content Padding to account for fixed header */
-.content-page {
-    padding-top: 120px; 
-}
+.content-page { padding-top: 130px; }
 
-/* Filter Categories */
+/* Filter */
 .categories {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin: 2rem 0 3rem 0;
+    margin-bottom: 3rem;
 }
 
 .filter-btn {
@@ -62,195 +58,77 @@ body {
     letter-spacing: 1px;
     color: #888;
     cursor: pointer;
-    transition: color 0.2s;
 }
 
-.filter-btn.active, .filter-btn:hover { color: #000; }
+.filter-btn.active { color: #000; font-weight: bold; }
 
-/* Museum Wall Masonry Layout (Gapless) */
+/* Masonry Wall */
 .gallery-masonry {
-    column-count: 3; /* Number of columns */
-    column-gap: 0;   /* No space between columns */
+    column-count: 3;
+    column-gap: 0;
     width: 100%;
-    padding: 0;
 }
 
-.project-card {
-    break-inside: avoid; /* Prevents card from splitting across columns */
-    position: relative;
-    cursor: pointer;
-    line-height: 0; /* Removes microscopic gaps below images */
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-/* Gallery Item Container */
 .project-card {
     break-inside: avoid;
     position: relative;
     cursor: pointer;
     line-height: 0;
-    overflow: hidden; /* Ensures nothing spills out */
 }
 
-/* Remove the size increase effect */
-.project-card:hover img {
-    transform: none; 
-}
+.project-card img { width: 100%; display: block; }
 
-/* The Overlay: Now transparent and positioned at the bottom */
+/* Full-width Hover Title Bar */
 .overlay {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background: transparent; /* Removed white opacity */
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: transparent;
     opacity: 0;
     transition: opacity 0.2s ease;
     display: flex;
-    align-items: flex-end; /* Places title at the bottom */
-    padding: 0; /* Space from the edges of the image */
-    pointer-events: none; /* Allows clicks to pass through to the image/card */
+    align-items: flex-end;
+    pointer-events: none;
 }
 
-/* Show the title on hover */
-.project-card:hover .overlay {
-    opacity: 1;
-}
+.project-card:hover .overlay { opacity: 1; }
 
-/* The Title: Small white background box */
 .project-hover-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #000;
-    background-color: #ffffff; /* Small white background only for text */
-    padding: 12px 20px; /* Padding inside the white box */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 12px 20px;
+    width: 100%;
+    display: block;
     line-height: 1.2;
-    width: 100%; /* Full width of the image */
-    display: block ; 
-    text-align: left; /* Align text to the left */
 }
 
-/* 30/70 Detail View - Adjusted for Fixed Nav */
+/* Detail View */
 .detail-overlay {
     position: fixed;
-    top: 100px; /* Starts below the nav */
+    top: 110px; /* Below Nav */
     left: 0;
-    width: 100%; 
-    height: calc(100vh - 100px);
+    width: 100%; height: calc(100vh - 110px);
     background: #fff;
-    display: flex;
-    z-index: 2000;
+    z-index: 5000;
 }
 
-.detail-content-wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
-.detail-sidebar {
-    width: 30%;
-    padding: 3rem 2rem;
-    overflow-y: auto;
-    border-right: 1px solid #f0f0f0;
-}
-
-.detail-gallery {
-    width: 70%;
-    overflow-y: scroll;
-    background: #ffffff;
-}
-
-.detail-gallery img { 
-    width: 100%; 
-    display: block; 
-    margin-bottom: 0; /* Gapless museum feel in project detail too */
-}
-
-.back-link { 
-    cursor: pointer; 
-    display: block; 
-    margin-bottom: 2rem; 
-    font-size: 0.8rem; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Resume & Contact Styles */
-.resume-wrapper, .contact-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 5% 5rem 5%;
-}
-
-.resume-intro {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
-    max-width: 800px;
-}
-
-.resume-grid { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    gap: 60px; 
-}
-
-.resume-col h3 { 
-    font-size: 0.8rem; 
-    text-transform: uppercase; 
-    border-bottom: 1px solid #000; 
-    padding-bottom: 5px; 
-    margin-bottom: 1.5rem; 
-}
-
-.contact-container { 
-    display: flex; 
-    justify-content: space-between; 
-    padding-top: 2rem; 
-}
-
-.download-btn {
-    display: inline-block;
-    border: 1px solid #000;
-    padding: 10px 25px;
-    margin-top: 2rem;
-    text-decoration: none;
-    color: #000;
-    font-size: 0.8rem;
-    transition: background 0.2s, color 0.2s;
-}
-
-.download-btn:hover {
-    background: #000;
-    color: #fff;
-}
+.detail-content-wrapper { display: flex; height: 100%; }
+.detail-sidebar { width: 30%; padding: 3rem; overflow-y: auto; border-right: 1px solid #eee; }
+.detail-gallery { width: 70%; overflow-y: scroll; }
+.detail-gallery img { width: 100%; display: block; }
 
 .hidden { display: none !important; }
+.back-link { cursor: pointer; display: block; margin-bottom: 2rem; font-size: 0.8rem; }
 
-.copy-small { 
-    font-size: 0.7rem; 
-    text-decoration: underline; 
-    cursor: pointer; 
-    margin-left: 10px; 
-    color: #888;
-}
+/* Resume & Contact Grid */
+.resume-wrapper, .contact-container { max-width: 1000px; margin: 0 auto; padding: 2rem 5%; }
+.resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.resume-col h3 { font-size: 0.8rem; border-bottom: 1px solid #000; padding-bottom: 5px; margin-bottom: 1.5rem; }
+.download-btn { border: 1px solid #000; padding: 10px 25px; text-decoration: none; color: #000; display: inline-block; margin-top: 2rem; font-size: 0.8rem; }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .gallery-masonry { column-count: 2; }
-}
-
+@media (max-width: 1024px) { .gallery-masonry { column-count: 2; } }
 @media (max-width: 768px) {
     .gallery-masonry { column-count: 1; }
     .detail-content-wrapper { flex-direction: column; }
-    .detail-sidebar { width: 100%; border-right: none; border-bottom: 1px solid #eee; }
-    .detail-gallery { width: 100%; }
-    .resume-grid { grid-template-columns: 1fr; gap: 40px; }
-    .contact-container { flex-direction: column; gap: 40px; }
+    .detail-sidebar, .detail-gallery { width: 100%; }
 }
