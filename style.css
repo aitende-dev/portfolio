@@ -6,14 +6,20 @@ body {
     color: #1a1a1a;
     background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-/* Navigation */
-nav {
+/* Fixed Navigation - Always on top */
+.main-nav {
     display: flex;
     justify-content: space-between;
-    padding: 3rem 5% 1rem 5%;
+    padding: 2.5rem 5% 1rem 5%;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 3000; /* Ensures nav is above the detail view */
 }
 
 .logo { font-size: 1.5rem; cursor: pointer; }
@@ -26,9 +32,10 @@ nav {
     position: relative;
 }
 
+/* Active indicator: Blue asterisk as requested */
 .nav-links a.active::after {
     content: '*';
-    color: #3037ff; /* The red dot from your screenshot */
+    color: #3037ff; 
     position: absolute;
     bottom: -35px;
     left: 50%;
@@ -36,12 +43,17 @@ nav {
     transform: translateX(-50%);
 }
 
+/* Content Padding to account for fixed header */
+.content-page {
+    padding-top: 120px; 
+}
+
 /* Filter Categories */
 .categories {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin: 3rem 0;
+    margin: 2rem 0 3rem 0;
 }
 
 .filter-btn {
@@ -55,34 +67,37 @@ nav {
 
 .filter-btn.active, .filter-btn:hover { color: #000; }
 
-/* Gallery */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    padding: 0 5% 5rem 5%;
+/* Museum Wall Masonry Layout (Gapless) */
+.gallery-masonry {
+    column-count: 3; /* Number of columns */
+    column-gap: 0;   /* No space between columns */
+    width: 100%;
+    padding: 0;
 }
 
 .project-card {
+    break-inside: avoid; /* Prevents card from splitting across columns */
     position: relative;
     cursor: pointer;
-    overflow: hidden;
+    line-height: 0; /* Removes microscopic gaps below images */
 }
 
 .project-card img {
     width: 100%;
+    height: auto;
     display: block;
     transition: transform 0.5s ease;
 }
 
+/* Overlay for Project Name on Hover */
 .overlay {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.85);
     opacity: 0;
     transition: opacity 0.3s ease;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start; /* Title appears at top/start of image */
     padding: 20px;
 }
 
@@ -92,21 +107,30 @@ nav {
 .project-hover-title {
     font-size: 1rem;
     color: #000;
+    line-height: 1.2;
 }
 
-/* 30/70 Detail View */
+/* 30/70 Detail View - Adjusted for Fixed Nav */
 .detail-overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100vh;
+    top: 100px; /* Starts below the nav */
+    left: 0;
+    width: 100%; 
+    height: calc(100vh - 100px);
     background: #fff;
     display: flex;
-    z-index: 1000;
+    z-index: 2000;
+}
+
+.detail-content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 .detail-sidebar {
     width: 30%;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     overflow-y: auto;
     border-right: 1px solid #f0f0f0;
 }
@@ -114,24 +138,57 @@ nav {
 .detail-gallery {
     width: 70%;
     overflow-y: scroll;
-    background: #fafafa;
+    background: #ffffff;
 }
 
-.detail-gallery img { width: 100%; display: block; margin-bottom: 10px; }
+.detail-gallery img { 
+    width: 100%; 
+    display: block; 
+    margin-bottom: 0; /* Gapless museum feel in project detail too */
+}
 
-.back-link { cursor: pointer; display: block; margin-bottom: 2rem; font-size: 0.8rem; }
+.back-link { 
+    cursor: pointer; 
+    display: block; 
+    margin-bottom: 2rem; 
+    font-size: 0.8rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
 /* Resume & Contact Styles */
 .resume-wrapper, .contact-container {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 5% 5rem 5%;
 }
 
-.resume-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 3rem; }
-.resume-col h3 { font-size: 0.8rem; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; margin-bottom: 1rem; }
+.resume-intro {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
 
-.contact-container { display: flex; justify-content: space-between; padding-top: 5rem; }
+.resume-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 60px; 
+}
+
+.resume-col h3 { 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    border-bottom: 1px solid #000; 
+    padding-bottom: 5px; 
+    margin-bottom: 1.5rem; 
+}
+
+.contact-container { 
+    display: flex; 
+    justify-content: space-between; 
+    padding-top: 2rem; 
+}
+
 .download-btn {
     display: inline-block;
     border: 1px solid #000;
@@ -140,13 +197,34 @@ nav {
     text-decoration: none;
     color: #000;
     font-size: 0.8rem;
+    transition: background 0.2s, color 0.2s;
 }
 
-.hidden { display: none; }
-.copy-small { font-size: 0.7rem; text-decoration: underline; cursor: pointer; margin-left: 10px; }
+.download-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.hidden { display: none !important; }
+
+.copy-small { 
+    font-size: 0.7rem; 
+    text-decoration: underline; 
+    cursor: pointer; 
+    margin-left: 10px; 
+    color: #888;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .gallery-masonry { column-count: 2; }
+}
 
 @media (max-width: 768px) {
-    .gallery { grid-template-columns: 1fr; }
-    .detail-overlay { flex-direction: column; }
-    .detail-sidebar, .detail-gallery { width: 100%; height: auto; }
+    .gallery-masonry { column-count: 1; }
+    .detail-content-wrapper { flex-direction: column; }
+    .detail-sidebar { width: 100%; border-right: none; border-bottom: 1px solid #eee; }
+    .detail-gallery { width: 100%; }
+    .resume-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-container { flex-direction: column; gap: 40px; }
 }

@@ -26,6 +26,9 @@
       "images": [
         "23FS-Tragwerk/23FS-trag-poster.jpg", "23FS-Tragwerk/23FS-trag-concept.jpg", "23FS-Tragwerk/23FS-trag-details.jpg",
         "23FS-Tragwerk/23FS-trag-images1.jpg", "23FS-Tragwerk/23FS-trag-plaene1.jpg", "23FS-Tragwerk/23FS-trag-proces1.jpg"
+      ],
+      "hiddenFromGallery": [
+        "23FS-Tragwerk/23FS-trag-proces13.jpg"
       ]
     },
     {
