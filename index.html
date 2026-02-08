@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anneke Iten de Leon | Architecture</title>
+    <title>Anneke Iten de Leon | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
+    <nav class="main-nav">
         <div class="logo" onclick="showPage('projects')">Anneke Iten de Leon</div>
         <div class="nav-links">
-            <a href="#" onclick="showPage('projects')" id="link-projects">Selected Works</a>
+            <a href="#" onclick="showPage('projects')" id="link-projects" class="active">Selected Works</a>
             <a href="#" onclick="showPage('resume')" id="link-resume">Resume</a>
             <a href="#" onclick="showPage('contact')" id="link-contact">Contact</a>
         </div>
@@ -19,49 +19,59 @@
 
     <main id="page-projects" class="content-page">
         <div class="categories">
-            <span class="filter-btn active" onclick="filterGallery('all', this)">All</span>
-            <span class="filter-btn" onclick="filterGallery('studio', this)">Studio</span>
-            <span class="filter-btn" onclick="filterGallery('internship', this)">Internship</span>
-            <span class="filter-btn" onclick="filterGallery('personal', this)">Personal</span>
-            <span class="filter-btn" onclick="filterGallery('other', this)">Other</span>
+            <span class="filter-btn active" onclick="filterGallery('all', this)">ALL</span>
+            <span class="filter-btn" onclick="filterGallery('studio', this)">STUDIO</span>
+            <span class="filter-btn" onclick="filterGallery('internship', this)">INTERNSHIP</span>
+            <span class="filter-btn" onclick="filterGallery('personal', this)">PERSONAL</span>
+            <span class="filter-btn" onclick="filterGallery('other', this)">OTHER</span>
         </div>
-
-        <div class="gallery">
-            <div class="project-card studio" onclick="openProject('Islington Stone House', 'London, UK', '2024', 'Lead Designer', 'This project explores the density of urban living within the historic fabric of London. Using local brick and stone, the facade mimics the rhythm of the existing streetscape while introducing modern apertures.')">
-                <img src="project-image-1.jpg" alt="Urban Housing">
-                <div class="overlay">
-                    <div class="project-hover-title">Islington Stone House</div>
-                </div>
-            </div>
+        <div class="gallery" id="gallery-grid">
             </div>
     </main>
+
+    <div id="detail-view" class="detail-overlay hidden">
+        <div class="detail-content-wrapper">
+            <aside class="detail-sidebar">
+                <span class="back-link" onclick="closeProject()">← Back to Projects</span>
+                <h2 id="det-title"></h2>
+                <div class="project-meta">
+                    <p><strong>Location:</strong> <span id="det-loc"></span></p>
+                    <p><strong>Year:</strong> <span id="det-year"></span></p>
+                    <p><strong>Role:</strong> <span id="det-role"></span></p>
+                </div>
+                <div class="det-description" id="det-desc"></div>
+            </aside>
+            <section class="detail-gallery" id="det-images">
+                </section>
+        </div>
+    </div>
 
     <main id="page-resume" class="content-page hidden">
         <div class="resume-wrapper">
             <section class="resume-intro">
-                <p>My name is Anneke Iten de Leon. I was born and raised in Guatemala[cite: 5]. For my architectural studies, I moved to Switzerland—a step that opened up a new world for me personally and geographically[cite: 6].</p>
+                <p>My name is Anneke Iten de Leon. I was born and raised in Guatemala[cite: 5, 13]. For my architecture studies, I moved to Switzerland—a step that opened up a new world for me personally and geographically[cite: 6].</p>
             </section>
             
             <div class="resume-grid">
                 <div class="resume-col">
                     <h3>Education</h3>
-                    <p><strong>ETH Zürich</strong> (2021 – Present)<br>B.A. Architecture, 4th Semester Completed[cite: 19, 20].</p>
-                    <p><strong>German School Guatemala</strong> (2007 – 2020)<br>High School Education[cite: 16, 17].</p>
+                    <p><strong>ETH Zürich</strong> (09/2021 – Present)<br>Architecture Department, B.A. (4th semester completed) [cite: 19, 20].</p>
+                    <p><strong>German School Guatemala</strong> (01/2007 – 10/2020)<br>Guatemala City [cite: 16-18].</p>
                     
                     <h3>Skills</h3>
-                    <p>Rhino, Grasshopper, Vectorworks, Archicad, Adobe Premiere, InDesign, Photoshop, AutoCAD, Office [cite: 39-47].</p>
+                    <p>Rhino, Grasshopper, Vectorworks, Archicad, Adobe Premiere, InDesign, Photoshop, AutoCAD, Office [cite: 38-47].</p>
                 </div>
                 <div class="resume-col">
                     <h3>Experience</h3>
-                    <p><strong>Professorship Gramazio Kohler</strong> (2023 – 2025)<br>Teaching Assistant in Computational Design & Digital Design [cite: 30-32].</p>
-                    <p><strong>Clou Architekten</strong> (2023 – 2024)<br>Architecture Internship [cite: 26-28].</p>
-                    <p><strong>Corporacion Victoria</strong> (2021)<br>Drafter [cite: 23-25].</p>
+                    <p><strong>Professorship Gramazio Kohler, ETH Zürich</strong> (09/2023 – 08/2025)<br>Hilfsassistierende (Teaching Assistant) in Computational Design III & IV and Digital Design 1 [cite: 29-32].</p>
+                    <p><strong>Clou Architekten, Zürich</strong> (09/2023 – 08/2024)<br>Architecture Internship [cite: 26-28].</p>
+                    <p><strong>Corporacion Victoria, Guatemala</strong> (03/2021 – 06/2021)<br>Drafter (Zeichner) [cite: 23-25].</p>
                     
                     <h3>Languages</h3>
                     <p>Spanish (Native) [cite: 55, 56], German (C1) [cite: 57, 58], English (C1) [cite: 59, 60], French (A2)[cite: 61, 62].</p>
                 </div>
             </div>
-            <a href="portfolio.pdf" class="download-btn">Download Portfolio PDF</a>
+            <a href="Portfolio_Anneke.pdf" class="download-btn">Download Full Portfolio PDF</a>
         </div>
     </main>
 
@@ -69,68 +79,90 @@
         <div class="contact-container">
             <div class="contact-section">
                 <h3>LOCATION</h3>
-                <p>Studio located in Zürich, Switzerland</p>
+                <p>Based in Zürich, Switzerland</p>
             </div>
             <div class="contact-section">
                 <h3>CONTACT</h3>
-                <p>iten.an.alt@gmail.com <span class="copy-small">copy</span> [cite: 4]</p>
-                <p>instagram.com/pierrickcalvez</p>
-                <p>Newsletter</p>
+                <p>iten.an.alt@gmail.com <span class="copy-small" onclick="copyEmail()">copy</span></p>
+                <p>instagram.com/anneke_iten</p>
                 <br>
-                <a href="portfolio.pdf" class="download-btn">Download Portfolio</a>
+                <a href="Portfolio_Anneke.pdf" class="download-btn">Download Portfolio</a>
             </div>
         </div>
     </main>
 
-    <div id="detail-view" class="detail-overlay hidden">
-        <div class="detail-sidebar">
-            <span class="back-link" onclick="closeProject()">← Back to Projects</span>
-            <h2 id="det-title"></h2>
-            <p><strong>Location:</strong> <span id="det-loc"></span></p>
-            <p><strong>Year:</strong> <span id="det-year"></span></p>
-            <p><strong>Role:</strong> <span id="det-role"></span></p>
-            <div class="det-description" id="det-desc"></div>
-        </div>
-        <div class="detail-gallery" id="det-images">
-            </div>
-    </div>
-
     <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.content-page').forEach(p => p.classList.add('hidden'));
-            document.getElementById('page-' + pageId).classList.remove('hidden');
-            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-            document.getElementById('link-' + pageId).classList.add('active');
-            window.scrollTo(0,0);
-            if(pageId !== 'projects') document.getElementById('detail-view').classList.add('hidden');
+        let allProjects = [];
+
+        // LOAD PROJECTS FROM JSON
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                allProjects = data.projects;
+                renderGallery(allProjects);
+            })
+            .catch(err => console.error("Error loading JSON:", err));
+
+        function renderGallery(projects) {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = projects.map(p => `
+                <div class="project-card" onclick="openProject('${p.id}')">
+                    <img src="website-fotos/${p.images[0]}" alt="${p.title}">
+                    <div class="overlay">
+                        <div class="project-hover-title">${p.title}</div>
+                    </div>
+                </div>
+            `).join('');
         }
 
         function filterGallery(category, btn) {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            document.querySelectorAll('.project-card').forEach(card => {
-                card.style.display = (category === 'all' || card.classList.contains(category)) ? 'block' : 'none';
-            });
+            
+            const filtered = category === 'all' 
+                ? allProjects 
+                : allProjects.filter(p => p.category.toLowerCase() === category.toLowerCase());
+            renderGallery(filtered);
         }
 
-        function openProject(title, loc, year, role, desc) {
-            document.getElementById('det-title').innerText = title;
-            document.getElementById('det-loc').innerText = loc;
-            document.getElementById('det-year').innerText = year;
-            document.getElementById('det-role').innerText = role;
-            document.getElementById('det-desc').innerText = desc;
+        function showPage(pageId) {
+            document.querySelectorAll('.content-page').forEach(p => p.classList.add('hidden'));
+            document.getElementById('page-' + pageId).classList.remove('hidden');
+            document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+            document.getElementById('link-' + pageId).classList.add('active');
             
-            // Example image injection
-            document.getElementById('det-images').innerHTML = `
-                <img src="img1.jpg"><img src="img2.jpg"><img src="img3.jpg">
-            `;
+            // Hide detail view when switching main pages
+            document.getElementById('detail-view').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            window.scrollTo(0,0);
+        }
+
+        function openProject(id) {
+            const p = allProjects.find(item => item.id === id);
+            if (!p) return;
+
+            document.getElementById('det-title').innerText = p.title;
+            document.getElementById('det-loc').innerText = p.location;
+            document.getElementById('det-year').innerText = p.year;
+            document.getElementById('det-role').innerText = p.role;
+            document.getElementById('det-desc').innerText = p.description;
+            
+            document.getElementById('det-images').innerHTML = p.images.map(img => 
+                `<img src="website-fotos/${img}" alt="${p.title}">`
+            ).join('');
+            
             document.getElementById('detail-view').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden'; // Prevents background scroll
         }
 
         function closeProject() {
             document.getElementById('detail-view').classList.add('hidden');
             document.body.style.overflow = 'auto';
+        }
+
+        function copyEmail() {
+            navigator.clipboard.writeText('iten.an.alt@gmail.com');
+            alert('Email copied to clipboard');
         }
     </script>
 </body>
