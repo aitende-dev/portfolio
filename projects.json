@@ -1,0 +1,108 @@
+{
+  "projects": [
+    {
+      "id": "coding-25hs",
+      "category": "personal",
+      "title": "Computational Design & Coding",
+      "location": "ETH Zürich",
+      "year": "2025",
+      "role": "Hilfsassistierende (Teaching Assistant)",
+      "description": "Exploration of computational design principles and coding logic. This work relates to my role as a Teaching Assistant for Computational Design III & IV and Digital Design 1 at ETH Zürich[cite: 31, 32].",
+      "images": [
+        "25HS-Coding/25HSCoding-1.png", "25HS-Coding/25HSCoding-2.png", "25HS-Coding/25HSCoding-3.png",
+        "25HS-Coding/25HSCoding-4.png", "25HS-Coding/25HSCoding-5.png", "25HS-Coding/25HSCoding-6.jpg",
+        "25HS-Coding/25HSCoding-7.png", "25HS-Coding/GIF/25HSCoding-25Coding_1.png",
+        "25HS-Coding/GIF/25HSCoding-25Coding_image1.png", "25HS-Coding/GIF/25HSCoding-25Coding_image2.png"
+      ]
+    },
+    {
+      "id": "tragwerk-23fs",
+      "category": "studio",
+      "title": "Structural Systems (Tragwerk)",
+      "location": "Zürich, CH",
+      "year": "2023",
+      "role": "Architecture Student",
+      "description": "A deep dive into structural systems, concept development, and process documentation. Includes posters, concept sketches, and detailed structural plans completed during my fourth semester at ETH Zürich[cite: 19, 20].",
+      "images": [
+        "23FS-Tragwerk/23FS-trag-poster.jpg", "23FS-Tragwerk/23FS-trag-concept.jpg", "23FS-Tragwerk/23FS-trag-details.jpg",
+        "23FS-Tragwerk/23FS-trag-images1.jpg", "23FS-Tragwerk/23FS-trag-plaene1.jpg", "23FS-Tragwerk/23FS-trag-proces1.jpg"
+      ]
+    },
+    {
+      "id": "urban-housing-24hs",
+      "category": "studio",
+      "title": "Urban Housing & Density",
+      "location": "Zürich, CH",
+      "year": "2024",
+      "role": "Lead Designer",
+      "description": "Architectural exploration of urban density, featuring site plans (situationsplan), floor plans (grundriss), and sections (schnitt) alongside atmospheric collages and physical model renders.",
+      "images": [
+        "24HS/24HS-Collage.png", "24HS/24HS-situationsplan.jpg", "24HS/24HS-grundriss1.jpg",
+        "24HS/24HS-schnitt1.jpg", "24HS/24HS-ansicht1.jpg", "24HS/24HS-details1.jpg"
+      ]
+    },
+    {
+      "id": "internship-clou",
+      "category": "internship",
+      "title": "Professional Practice",
+      "location": "Zürich, CH",
+      "year": "2023-2024",
+      "role": "Praktikum (Intern)",
+      "description": "Selection of professional work and documentation produced during my year-long internship at Clou Architekten in Zürich[cite: 26, 27].",
+      "images": [
+        "23FS/23FS-Report1.jpg", "23FS/23FS-ActorNetwork.jpeg", "23FS/23FS-images1.jpg"
+      ]
+    },
+    {
+      "id": "klima-24hs25fs",
+      "category": "other",
+      "title": "Climate & Environment",
+      "location": "Zürich, CH",
+      "year": "2025",
+      "role": "Architecture Student",
+      "description": "Research-based project focusing on environmental factors, sustainability, and climate-responsive design strategies.",
+      "images": [
+        "24HS25FS-Klima/24HS25FS-Klima1.jpg", "24HS25FS-Klima/24HS25FS-Klima2.jpg", "24HS25FS-Klima/24HS25FS-Klima3.jpg"
+      ]
+    },
+    {
+      "id": "early-works-21hs",
+      "category": "studio",
+      "title": "Foundations of Design",
+      "location": "Zürich, CH",
+      "year": "2021",
+      "role": "Architecture Student",
+      "description": "Early studio work including axonometric drawings, hand sketches (skizzen), and initial architectural renders following my move from Guatemala to Switzerland[cite: 5, 6].",
+      "images": [
+        "21HS/21HS-Axonometrie.jpg", "21HS/21HS-Render.jpg", "21HS/21HS-Skizzen-1.jpg",
+        "21HS/21HS-Grundriss1.jpg", "21HS/21HS-Ansicht-Schnitt1.jpg"
+      ]
+    },
+    {
+      "id": "model-making-22hs",
+      "category": "studio",
+      "title": "Materiality & Model Making",
+      "location": "Zürich, CH",
+      "year": "2022",
+      "role": "Architecture Student",
+      "description": "Exploration of physical materiality and actor-network theory through model making and technical layout design.",
+      "images": [
+        "22HS/22HS-Model-1.png", "22HS/22HS-Model-2.png", "22HS/22HS-ActorNetwork.jpg",
+        "22HS/22HS-Schnitt1.jpg", "22HS/22HS-Layout.jpg"
+      ]
+    },
+    {
+      "id": "art-exploration-22fs",
+      "category": "other",
+      "title": "Artistic Exploration (Kunst)",
+      "location": "Zürich, CH",
+      "year": "2022",
+      "role": "Architecture Student",
+      "description": "A collection of artistic works (Kunst) and model explorations produced alongside architectural curriculum requirements.",
+      "images": [
+        "22FS/Kunst/22HSKunst-2.jpg", "22FS/Kunst/22HSKunst-3.jpg", "22FS/22FS-Model1.jpeg",
+        "22FS/22FS-Blatt1.jpg", "22FS/22FS-Icon.png"
+      ]
+    }
+  ]
+}
