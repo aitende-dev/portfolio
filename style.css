@@ -185,3 +185,20 @@ body {
 #image-counter {
     color: #888;
 }
+
+.shuffle-btn {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3037ff; /* Matching your blue asterisk color */
+    cursor: pointer;
+    margin-left: 20px;
+    border: 1px solid #3037ff;
+    padding: 4px 10px;
+    transition: all 0.2s ease;
+}
+
+.shuffle-btn:hover {
+    background-color: #3037ff;
+    color: #ffffff;
+}
