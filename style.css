@@ -122,7 +122,7 @@ body {
 /* Detail View */
 .detail-overlay {
     position: fixed;
-    top: 110px; /* Below Nav */
+    top: 90px; /* Below Nav */
     left: 0;
     width: 100%; height: calc(100vh - 110px);
     background: #fff;
