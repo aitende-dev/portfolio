@@ -115,7 +115,7 @@ body {
     transition: opacity 0.2s ease;
     display: flex;
     align-items: flex-end; /* Places title at the bottom */
-    padding: 10px; /* Space from the edges of the image */
+    padding: 0; /* Space from the edges of the image */
     pointer-events: none; /* Allows clicks to pass through to the image/card */
 }
 
@@ -126,12 +126,14 @@ body {
 
 /* The Title: Small white background box */
 .project-hover-title {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     color: #000;
     background-color: #ffffff; /* Small white background only for text */
-    padding: 4px 8px; /* Padding inside the white box */
+    padding: 12px 20px; /* Padding inside the white box */
     line-height: 1.2;
-    display: inline-block; /* Ensures background only wraps the text */
+    width: 100%; /* Full width of the image */
+    display: block ; 
+    text-align: left; /* Align text to the left */
 }
 
 /* 30/70 Detail View - Adjusted for Fixed Nav */
