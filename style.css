@@ -65,7 +65,7 @@ body {
 /* Masonry Wall */
 .gallery-masonry {
     column-count: 3;
-    column-gap: 0;
+    column-gap: 0.4rem;
     width: 100%;
 }
 
@@ -126,7 +126,7 @@ body {
 .resume-col h3 { font-size: 0.8rem; border-bottom: 1px solid #000; padding-bottom: 5px; margin-bottom: 1.5rem; }
 .download-btn { border: 1px solid #000; padding: 10px 25px; text-decoration: none; color: #000; display: inline-block; margin-top: 2rem; font-size: 0.8rem; }
 
-@media (max-width: 1024px) { .gallery-masonry { column-count: 2; } }
+@media (max-width: 1024px) { .gallery-masonry { column-count: 3; } }
 @media (max-width: 768px) {
     .gallery-masonry { column-count: 1; }
     .detail-content-wrapper { flex-direction: column; }
