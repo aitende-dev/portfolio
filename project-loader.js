@@ -2,28 +2,36 @@ let currentImages = [];
 let currentIndex = 0;
 
 async function loadProject() {
-    // 1. Get the project ID from the URL (e.g., project.html?id=tragwerk)
+    // 1. Get the ID from the URL (e.g., project-detail.html?id=urban-housing)
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
 
-    // 2. Fetch your JSON file
-    const response = await fetch('projects.json');
-    const data = await response.json();
+    try {
+        const response = await fetch('projects.json');
+        const data = await response.json();
 
-    // 3. Find the specific project
-    const project = data.projects.find(p => p.id === projectId);
+        // 2. Find the project
+        const project = data.projects.find(p => p.id === projectId);
 
-    if (project) {
-        // Update Sidebar
-        document.getElementById('proj-title').innerText = project.title;
-        document.getElementById('proj-loc').innerText = project.location;
-        document.getElementById('proj-year').innerText = project.year;
-        document.getElementById('proj-role').innerText = project.role;
-        document.getElementById('proj-desc').innerText = project.description;
+        if (project) {
+            // Update Text Content
+            document.getElementById('proj-title').innerText = project.title;
+            document.getElementById('proj-loc').innerText = project.location;
+            document.getElementById('proj-year').innerText = project.year;
+            document.getElementById('proj-role').innerText = project.role;
+            document.getElementById('proj-desc').innerHTML = `<p>${project.description}</p>`;
 
-        // Setup Slider
-        currentImages = project.images;
-        updateSlider();
+            // 3. Set Images (We use ALL images here, ignoring hiddenFromGallery)
+            currentImages = project.images;
+            updateSlider();
+            
+            // Set Page Title for Browser Tab
+            document.title = `${project.title} | Anneke Iten de Leon`;
+        } else {
+            document.getElementById('proj-title').innerText = "Project Not Found";
+        }
+    } catch (error) {
+        console.error("Error fetching project data:", error);
     }
 }
 
@@ -31,7 +39,7 @@ function updateSlider() {
     const wrapper = document.getElementById('slider-images');
     const counter = document.getElementById('image-counter');
     
-    // Using your 'website-fotos/' folder prefix
+    // Path includes your "website-fotos" folder
     wrapper.innerHTML = `<img src="website-fotos/${currentImages[currentIndex]}" alt="Project Image">`;
     counter.innerText = `${currentIndex + 1} / ${currentImages.length}`;
 }
@@ -46,5 +54,10 @@ function prevImage() {
     updateSlider();
 }
 
-// Initialize on load
+// Support for Arrow Keys
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+});
+
 loadProject();
