@@ -1,7 +1,7 @@
 /* --- Base Styles & Typography --- */
 :root {
   --accent-red: #cc3333; /* The signature red color */
-  --text-dark: #333333;
+  --text-dark: #5e0000;
   --bg-light: #fdfdfd;
   --placeholder-gray: #e9ecef;
 }

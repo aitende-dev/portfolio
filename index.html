@@ -19,34 +19,70 @@
         <ul>
           <li><a href="index.html">work</a></li>
           <li><a href="vision.html">vision</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
         </ul>
       </nav>
     </aside>
 
     <main class="content">
-      <div class="filter-menu">
-        <a href="#">all projects</a>
-        <a href="#">timber frame</a>
-        <a href="#">new build</a>
-        <a href="#">renovation</a>
-        <a href="#">self-build</a>
+      <div class="filter-menu" id="filter-menu">
+        <a href="#" data-filter="all" class="active">all projects</a>
+        <a href="#" data-filter="university">university</a>
+        <a href="#" data-filter="work">work</a>
+        <a href="#" data-filter="personal">personal</a>
       </div>
 
-      <div class="project-grid">
-        <a href="project.html" class="project-card">
-          <img src="https://via.placeholder.com/400" alt="Project 1">
+      <div class="project-grid" id="project-grid">
+        
+        <a href="project.html" class="project-card" data-category="work">
+          <img src="https://via.placeholder.com/400?text=Work+Project" alt="Work Project">
         </a>
-        <a href="project.html" class="project-card">
-          <img src="https://via.placeholder.com/400" alt="Project 2">
+        
+        <a href="project.html" class="project-card" data-category="university">
+          <img src="https://via.placeholder.com/400?text=Uni+Project" alt="University Project">
         </a>
-        <a href="project.html" class="project-card">
-          <img src="https://via.placeholder.com/400" alt="Project 3">
+        
+        <a href="project.html" class="project-card" data-category="personal">
+          <img src="https://via.placeholder.com/400?text=Personal+Project" alt="Personal Project">
         </a>
-        </div>
+
+        <a href="project.html" class="project-card" data-category="work">
+          <img src="https://via.placeholder.com/400?text=Work+Project+2" alt="Work Project 2">
+        </a>
+
+      </div>
     </main>
   </div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterLinks = document.querySelectorAll('.filter-menu a');
+      const projects = document.querySelectorAll('.project-card');
 
+      filterLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault(); // Prevents the page from jumping to the top
+
+          // 1. Remove 'active' class from all links, add to the clicked one
+          filterLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+
+          // 2. Get the category we want to filter by
+          const filterValue = link.getAttribute('data-filter');
+
+          // 3. Loop through all projects and hide/show them
+          projects.forEach(project => {
+            const projectCategory = project.getAttribute('data-category');
+            
+            if (filterValue === 'all' || projectCategory === filterValue) {
+              project.classList.remove('hidden'); // Show it
+            } else {
+              project.classList.add('hidden'); // Hide it
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
