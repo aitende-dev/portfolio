@@ -142,3 +142,40 @@ a:hover {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.9rem;
 }
+
+/* --- Vision Page Specific Styles --- */
+
+.vision-intro {
+  margin-bottom: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--accent-red);
+  max-width: 800px;
+}
+
+.vision-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Creates two equal columns */
+  gap: 60px; /* Space between columns */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.vision-heading {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--accent-red);
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.vision-columns p {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Helper class to make specific paragraphs red like in the screenshot */
+.text-red {
+  color: var(--accent-red);
+}
