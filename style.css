@@ -1,0 +1,144 @@
+/* --- Base Styles & Typography --- */
+:root {
+  --accent-red: #cc3333; /* The signature red color */
+  --text-dark: #333333;
+  --bg-light: #fdfdfd;
+  --placeholder-gray: #e9ecef;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace; /* Typewriter feel for UI */
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-red);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- Layout Structure --- */
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar (Left Column) --- */
+.sidebar {
+  width: 200px;
+  padding: 50px 40px;
+  position: fixed; /* Keeps sidebar in place while scrolling */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* --- Main Content (Right Column) --- */
+.content {
+  margin-left: 280px; /* Offset by sidebar width + padding */
+  padding: 50px 40px;
+  flex-grow: 1;
+  max-width: 1200px;
+}
+
+/* --- Top Filter Menu (Homepage) --- */
+.filter-menu {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* --- Project Grid (Homepage) --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  aspect-ratio: 1 / 1; /* Makes them perfect squares */
+  background-color: var(--placeholder-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover {
+  opacity: 0.8;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- Project Detail Page --- */
+.project-header {
+  margin-bottom: 40px;
+}
+
+.project-title {
+  color: var(--accent-red);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.project-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr; /* Image takes 60%, text takes 40% */
+  gap: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Better reading font for long text */
+}
+
+.project-hero img {
+  width: 100%;
+  background-color: var(--placeholder-gray);
+}
+
+.project-info h2 {
+  color: var(--accent-red);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.project-info p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.project-meta {
+  margin-top: 40px;
+  color: var(--accent-red);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}

@@ -1,195 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Architecture</title>
-    <style>
-        /* --- CORE STYLES & TYPOGRAPHY --- */
-        :root {
-            --accent-red: #5536d3; /* The specific red from the screenshots */
-            --bg-color: #ffffff;
-            --text-color: #5536d3; 
-            --box-bg: #e6e9ea; /* Light gray for the empty image boxes */
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Courier New", Courier, monospace; /* Typewriter aesthetic */
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            min-height: 100vh;
-        }
-
-        a {
-            color: var(--accent-red);
-            text-decoration: none;
-            transition: opacity 0.2s ease;
-        }
-
-        a:hover {
-            opacity: 0.6;
-        }
-
-        /* --- LAYOUT: SIDEBAR --- */
-        .sidebar {
-            width: 250px;
-            padding: 40px;
-            position: fixed;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: normal;
-            margin-top: 0;
-            margin-bottom: 80px;
-            line-height: 1.2;
-        }
-
-        .main-nav {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            font-size: 16px;
-        }
-
-        /* --- LAYOUT: MAIN CONTENT --- */
-        .content {
-            margin-left: 250px; /* Offset for the fixed sidebar */
-            padding: 40px;
-            flex-grow: 1;
-        }
-
-        /* Top Filter Menu */
-        .filter-nav {
-            margin-bottom: 40px;
-            display: flex;
-            gap: 30px;
-        }
-
-        .filter-nav a.active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        /* --- PORTFOLIO GRID --- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: var(--box-bg);
-            aspect-ratio: 1 / 1; /* Perfect squares */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures your images fill the square */
-            display: none; /* Hidden until you add real images */
-        }
-
-        /* Hide elements for the JS filter */
-        .hidden {
-            display: none;
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 1000px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            .sidebar { position: relative; width: auto; height: auto; padding: 20px; margin-bottom: 0;}
-            .content { margin-left: 0; padding: 20px; }
-            .grid { grid-template-columns: 1fr; }
-            .filter-nav { flex-wrap: wrap; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <div class="site-wrapper">
     <aside class="sidebar">
-        <h1 class="logo">ondertak<br>architectuur</h1>
-        <nav class="main-nav">
-            <a href="#">werk</a>
-            <a href="#">visie</a>
-            <a href="#">over</a>
-            <a href="#">contact</a>
-        </nav>
+      <div class="logo">
+        <a href="index.html">
+          undertak<br>architecture
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">work</a></li>
+          <li><a href="#">vision</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </nav>
     </aside>
 
     <main class="content">
-        <nav class="filter-nav">
-            <a href="#" class="filter-btn active" data-filter="all">alle projecten</a>
-            <a href="#" class="filter-btn" data-filter="houtskelet">houtskelet</a>
-            <a href="#" class="filter-btn" data-filter="nieuwbouw">nieuwbouw</a>
-            <a href="#" class="filter-btn" data-filter="verbouwing">verbouwing</a>
-        </nav>
+      <div class="filter-menu">
+        <a href="#">all projects</a>
+        <a href="#">timber frame</a>
+        <a href="#">new build</a>
+        <a href="#">renovation</a>
+        <a href="#">self-build</a>
+      </div>
 
-        <div class="grid" id="portfolio-grid">
-            <div class="project-card houtskelet nieuwbouw">
-                <span>[Image 1: Houtskelet/Nieuwbouw]</span>
-            </div>
-            <div class="project-card verbouwing">
-                <span>[Image 2: Verbouwing]</span>
-            </div>
-            <div class="project-card houtskelet">
-                <span>[Image 3: Houtskelet]</span>
-            </div>
-            <div class="project-card nieuwbouw">
-                <span>[Image 4: Nieuwbouw]</span>
-            </div>
-            <div class="project-card verbouwing">
-                <span>[Image 5: Verbouwing]</span>
-            </div>
-            <div class="project-card houtskelet nieuwbouw">
-                <span>[Image 6: Houtskelet/Nieuwbouw]</span>
-            </div>
+      <div class="project-grid">
+        <a href="project.html" class="project-card">
+          <img src="https://via.placeholder.com/400" alt="Project 1">
+        </a>
+        <a href="project.html" class="project-card">
+          <img src="https://via.placeholder.com/400" alt="Project 2">
+        </a>
+        <a href="project.html" class="project-card">
+          <img src="https://via.placeholder.com/400" alt="Project 3">
+        </a>
         </div>
     </main>
+  </div>
 
-    <script>
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projects = document.querySelectorAll('.project-card');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Update active state on buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                // Filter logic
-                const filterValue = btn.getAttribute('data-filter');
-
-                projects.forEach(project => {
-                    if (filterValue === 'all' || project.classList.contains(filterValue)) {
-                        project.classList.remove('hidden');
-                    } else {
-                        project.classList.add('hidden');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
