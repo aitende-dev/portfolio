@@ -19,13 +19,14 @@
         <ul>
           <li><a href="index.html">work</a></li>
           <li><a href="vision.html">vision</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
         </ul>
       </nav>
     </aside>
 
     <main class="content">
+      
       <div class="filter-menu" id="filter-menu">
         <a href="#" data-filter="all" class="active">all projects</a>
         <a href="#" data-filter="university">university</a>
@@ -36,25 +37,34 @@
       <div class="project-grid" id="project-grid">
         
         <a href="project.html" class="project-card" data-category="work">
-          <img src="https://via.placeholder.com/400?text=Work+Project" alt="Work Project">
+          <img src="https://via.placeholder.com/400?text=Work+Project+1" alt="Work Project 1">
         </a>
         
         <a href="project.html" class="project-card" data-category="university">
-          <img src="https://via.placeholder.com/400?text=Uni+Project" alt="University Project">
+          <img src="https://via.placeholder.com/400?text=Uni+Project+1" alt="University Project 1">
         </a>
         
         <a href="project.html" class="project-card" data-category="personal">
-          <img src="https://via.placeholder.com/400?text=Personal+Project" alt="Personal Project">
+          <img src="https://via.placeholder.com/400?text=Personal+Project+1" alt="Personal Project 1">
         </a>
 
         <a href="project.html" class="project-card" data-category="work">
           <img src="https://via.placeholder.com/400?text=Work+Project+2" alt="Work Project 2">
         </a>
 
+        <a href="project.html" class="project-card" data-category="university">
+          <img src="https://via.placeholder.com/400?text=Uni+Project+2" alt="University Project 2">
+        </a>
+
+        <a href="project.html" class="project-card" data-category="personal">
+          <img src="https://via.placeholder.com/400?text=Personal+Project+2" alt="Personal Project 2">
+        </a>
+
       </div>
     </main>
   </div>
-<script>
+
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
       const filterLinks = document.querySelectorAll('.filter-menu a');
       const projects = document.querySelectorAll('.project-card');
@@ -84,5 +94,6 @@
       });
     });
   </script>
+
 </body>
 </html>
