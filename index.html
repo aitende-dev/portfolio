@@ -35,39 +35,44 @@
       </div>
 
       <div class="project-grid" id="project-grid">
-        
-        <a href="project.html" class="project-card" data-category="work">
-          <img src="https://via.placeholder.com/400?text=Work+Project+1" alt="Work Project 1">
-        </a>
-        
-        <a href="project.html" class="project-card" data-category="university">
-          <img src="https://via.placeholder.com/400?text=Uni+Project+1" alt="University Project 1">
-        </a>
-        
-        <a href="project.html" class="project-card" data-category="personal">
-          <img src="https://via.placeholder.com/400?text=Personal+Project+1" alt="Personal Project 1">
-        </a>
-
-        <a href="project.html" class="project-card" data-category="work">
-          <img src="https://via.placeholder.com/400?text=Work+Project+2" alt="Work Project 2">
-        </a>
-
-        <a href="project.html" class="project-card" data-category="university">
-          <img src="https://via.placeholder.com/400?text=Uni+Project+2" alt="University Project 2">
-        </a>
-
-        <a href="project.html" class="project-card" data-category="personal">
-          <img src="https://via.placeholder.com/400?text=Personal+Project+2" alt="Personal Project 2">
-        </a>
-
+        <!-- Projects will be loaded dynamically here -->
       </div>
     </main>
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", async () => {
+      const projectGrid = document.getElementById('project-grid');
       const filterLinks = document.querySelectorAll('.filter-menu a');
-      const projects = document.querySelectorAll('.project-card');
+      let projects = []; // Will hold the DOM elements after they are created
+
+      // Fetch projects data
+      try {
+        const response = await fetch('projects.json');
+        if (!response.ok) throw new Error('Failed to load projects');
+        const data = await response.json();
+        
+        // Render projects
+        data.forEach(project => {
+          const card = document.createElement('a');
+          card.href = `project.html?id=${project.id}`;
+          card.className = 'project-card';
+          card.setAttribute('data-category', project.category);
+          
+          const img = document.createElement('img');
+          img.src = project.thumbnail;
+          img.alt = project.shortTitle || project.title;
+          
+          card.appendChild(img);
+          projectGrid.appendChild(card);
+        });
+
+        // Re-query the projects now that they are in the DOM
+        projects = document.querySelectorAll('.project-card');
+      } catch (error) {
+        console.error(error);
+        projectGrid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Error loading projects.</p>';
+      }
 
       filterLinks.forEach(link => {
         link.addEventListener('click', (e) => {

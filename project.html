@@ -25,37 +25,85 @@
       </nav>
     </aside>
 
-    <main class="content">
-      
-      <div class="project-header">
-        <h1 class="project-title">new build timber frame house with practice spaces</h1>
+    <main class="content" id="project-content">
+      <!-- Project details will be loaded dynamically here -->
+      <div style="text-align: center; padding: 50px;">
+        <p>Loading project...</p>
       </div>
-
-      <div class="project-layout">
-        <div class="project-hero">
-          <img src="https://via.placeholder.com/800x600" alt="Main Project Illustration">
-          
-          <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-              <img src="https://via.placeholder.com/400x300" alt="Floor Plan 1">
-              <img src="https://via.placeholder.com/400x300" alt="Floor Plan 2">
-          </div>
-        </div>
-
-        <div class="project-info">
-          <h2>Heusden</h2>
-          <p>A detached single-family home with integrated practice spaces is being realized in Heusden. The house is built in a timber frame and finished with ecological building materials, ensuring a sustainable and healthy living environment.</p>
-          <p>The design follows a T-shaped floor plan. The living spaces and practice spaces are located in the three outer corners, while the supporting functions are housed in the central junction, such as the entrance, storage, stairs, and sanitary facilities.</p>
-          
-          <div class="project-meta">
-            <p><strong>Materials:</strong> prefab timber frame, FSC wood, wood fiber and cellulose insulation, wood fiber insulating roof plates, Thermowood facade cladding...</p>
-            <p><strong>Phase:</strong> completed (2025)</p>
-            <p><strong>Collaborator:</strong> arch. Jane Doe - tender dossier and site supervision</p>
-          </div>
-        </div>
-      </div>
-
     </main>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('id');
+      const contentDiv = document.getElementById('project-content');
+
+      if (!projectId) {
+        contentDiv.innerHTML = '<div style="padding: 50px; text-align: center;"><h1>Project Not Found</h1><p>No project ID was provided.</p></div>';
+        return;
+      }
+
+      try {
+        const response = await fetch('projects.json');
+        if (!response.ok) throw new Error('Failed to load projects');
+        const data = await response.json();
+        
+        const project = data.find(p => p.id === projectId);
+        
+        if (!project) {
+          contentDiv.innerHTML = '<div style="padding: 50px; text-align: center;"><h1>Project Not Found</h1><p>The requested project does not exist.</p></div>';
+          return;
+        }
+
+        // Update page title
+        document.title = `${project.shortTitle || project.title} - Portfolio`;
+
+        // Build extra images HTML
+        let extraImagesHtml = '';
+        if (project.extraImages && project.extraImages.length > 0) {
+          const imgTags = project.extraImages.map(src => `<img src="${src}" alt="Additional Image">`).join('');
+          extraImagesHtml = `<div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              ${imgTags}
+          </div>`;
+        }
+
+        // Build description paragraphs HTML
+        let descriptionHtml = '';
+        if (project.description && project.description.length > 0) {
+          descriptionHtml = project.description.map(p => `<p>${p}</p>`).join('');
+        }
+
+        // Build HTML
+        const html = `
+          <div class="project-header">
+            <h1 class="project-title">${project.title}</h1>
+          </div>
+          <div class="project-layout">
+            <div class="project-hero">
+              <img src="${project.heroImage}" alt="Main Project Illustration">
+              ${extraImagesHtml}
+            </div>
+            <div class="project-info">
+              <h2>${project.shortTitle || project.title}</h2>
+              ${descriptionHtml}
+              <div class="project-meta">
+                ${project.materials ? \`<p><strong>Materials:</strong> \${project.materials}</p>\` : ''}
+                ${project.phase ? \`<p><strong>Phase:</strong> \${project.phase}</p>\` : ''}
+                ${project.collaborator ? \`<p><strong>Collaborator:</strong> \${project.collaborator}</p>\` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+
+        contentDiv.innerHTML = html;
+
+      } catch (error) {
+        console.error(error);
+        contentDiv.innerHTML = '<div style="padding: 50px; text-align: center;"><h1>Error</h1><p>There was an error loading the project details.</p></div>';
+      }
+    });
+  </script>
 
 </body>
 </html>

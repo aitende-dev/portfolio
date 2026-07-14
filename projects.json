@@ -1,0 +1,86 @@
+[
+  {
+    "id": "work-1",
+    "title": "new build timber frame house with practice spaces",
+    "shortTitle": "Heusden",
+    "category": "work",
+    "thumbnail": "https://via.placeholder.com/400?text=Work+Project+1",
+    "heroImage": "https://via.placeholder.com/800x600",
+    "extraImages": [
+      "https://via.placeholder.com/400x300",
+      "https://via.placeholder.com/400x300"
+    ],
+    "description": [
+      "A detached single-family home with integrated practice spaces is being realized in Heusden. The house is built in a timber frame and finished with ecological building materials, ensuring a sustainable and healthy living environment.",
+      "The design follows a T-shaped floor plan. The living spaces and practice spaces are located in the three outer corners, while the supporting functions are housed in the central junction, such as the entrance, storage, stairs, and sanitary facilities."
+    ],
+    "materials": "prefab timber frame, FSC wood, wood fiber and cellulose insulation, wood fiber insulating roof plates, Thermowood facade cladding...",
+    "phase": "completed (2025)",
+    "collaborator": "arch. Jane Doe - tender dossier and site supervision"
+  },
+  {
+    "id": "uni-1",
+    "title": "University Project 1",
+    "shortTitle": "Uni 1",
+    "category": "university",
+    "thumbnail": "https://via.placeholder.com/400?text=Uni+Project+1",
+    "heroImage": "https://via.placeholder.com/800x600",
+    "extraImages": [],
+    "description": ["Details about this university project will go here."],
+    "materials": "TBD",
+    "phase": "TBD",
+    "collaborator": "TBD"
+  },
+  {
+    "id": "personal-1",
+    "title": "Personal Project 1",
+    "shortTitle": "Personal 1",
+    "category": "personal",
+    "thumbnail": "https://via.placeholder.com/400?text=Personal+Project+1",
+    "heroImage": "https://via.placeholder.com/800x600",
+    "extraImages": [],
+    "description": ["Details about this personal project will go here."],
+    "materials": "TBD",
+    "phase": "TBD",
+    "collaborator": "TBD"
+  },
+  {
+    "id": "work-2",
+    "title": "Work Project 2",
+    "shortTitle": "Work 2",
+    "category": "work",
+    "thumbnail": "https://via.placeholder.com/400?text=Work+Project+2",
+    "heroImage": "https://via.placeholder.com/800x600",
+    "extraImages": [],
+    "description": ["Details about this work project will go here."],
+    "materials": "TBD",
+    "phase": "TBD",
+    "collaborator": "TBD"
+  },
+  {
+    "id": "uni-2",
+    "title": "University Project 2",
+    "shortTitle": "Uni 2",
+    "category": "university",
+    "thumbnail": "https://via.placeholder.com/400?text=Uni+Project+2",
+    "heroImage": "https://via.placeholder.com/800x600",
+    "extraImages": [],
+    "description": ["Details about this university project will go here."],
+    "materials": "TBD",
+    "phase": "TBD",
+    "collaborator": "TBD"
+  },
+  {
+    "id": "personal-2",
+    "title": "Personal Project 2",
+    "shortTitle": "Personal 2",
+    "category": "personal",
+    "thumbnail": "https://via.placeholder.com/400?text=Personal+Project+2",
+    "heroImage": "https://via.placeholder.com/800x600",
+    "extraImages": [],
+    "description": ["Details about this personal project will go here."],
+    "materials": "TBD",
+    "phase": "TBD",
+    "collaborator": "TBD"
+  }
+]
