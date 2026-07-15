@@ -106,9 +106,10 @@ a:hover {
   left: 0;
   right: 0;
   height: 100%;
-  background-color: rgba(253, 253, 253, 0.5); /* Slight white tint for legibility */
+  background-color: rgba(253, 253, 253, 0.5);
+  /* Slight white tint for legibility */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,9 +128,10 @@ a:hover {
   font-weight: bold;
   text-align: center;
   margin: 0;
-  transform: scale(0.9);
+  transform: scale(0.6);
   transition: transform 0.3s ease;
-  text-shadow: 0 0 15px rgba(253, 253, 253, 0.9); /* Subtle glow to ensure legibility */
+  text-shadow: 0 0 15px rgba(253, 253, 253, 0.9);
+  /* Subtle glow to ensure legibility */
 }
 
 .project-card:hover .project-name {
