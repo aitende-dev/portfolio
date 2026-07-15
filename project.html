@@ -67,8 +67,8 @@
         // Build extra images HTML
         let extraImagesHtml = '';
         if (project.extraImages && project.extraImages.length > 0) {
-          const imgTags = project.extraImages.map(src => `<img src="${src}" alt="Additional Image">`).join('');
-          extraImagesHtml = `<div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          const imgTags = project.extraImages.map(src => `<img src="${src}" alt="Additional Image" style="width: 100%; display: block; margin-bottom: 20px;">`).join('');
+          extraImagesHtml = `<div style="margin-top: 40px; column-count: 2; column-gap: 20px;">
               ${imgTags}
           </div>`;
         }
