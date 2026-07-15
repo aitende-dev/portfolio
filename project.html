@@ -12,14 +12,13 @@
     <aside class="sidebar">
       <div class="logo">
         <a href="index.html">
-          undertak<br>architecture
+          Anneke Iten de León<br>architecture
         </a>
       </div>
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">work</a></li>
-          <li><a href="vision.html">vision</a></li>
-          <li><a href="#">about</a></li>
+          <li><a href="about.html">about</a></li>
           <li><a href="#">contact</a></li>
         </ul>
       </nav>
@@ -31,6 +30,12 @@
         <p>Loading project...</p>
       </div>
     </main>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&#10094;</button>
+    <img src="" alt="Zoomed Image" id="lightbox-img">
+    <button class="lightbox-nav lightbox-next" id="lightbox-next">&#10095;</button>
   </div>
 
   <script>
@@ -88,15 +93,65 @@
               <h2>${project.shortTitle || project.title}</h2>
               ${descriptionHtml}
               <div class="project-meta">
-                ${project.materials ? \`<p><strong>Materials:</strong> \${project.materials}</p>\` : ''}
-                ${project.phase ? \`<p><strong>Phase:</strong> \${project.phase}</p>\` : ''}
-                ${project.collaborator ? \`<p><strong>Collaborator:</strong> \${project.collaborator}</p>\` : ''}
+                ${project.materials ? `<p><strong>Materials:</strong> ${project.materials}</p>` : ''}
+                ${project.phase ? `<p><strong>Phase:</strong> ${project.phase}</p>` : ''}
+                ${project.collaborator ? `<p><strong>Collaborator:</strong> ${project.collaborator}</p>` : ''}
               </div>
             </div>
           </div>
         `;
 
         contentDiv.innerHTML = html;
+
+        // --- Lightbox Logic ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const btnPrev = document.getElementById('lightbox-prev');
+        const btnNext = document.getElementById('lightbox-next');
+        const projectImages = Array.from(contentDiv.querySelectorAll('.project-hero img'));
+        let currentImageIndex = 0;
+
+        const updateLightboxImage = () => {
+          if (projectImages.length > 0) {
+            lightboxImg.style.opacity = 0;
+            setTimeout(() => {
+              lightboxImg.src = projectImages[currentImageIndex].src;
+              lightboxImg.style.opacity = 1;
+            }, 150);
+          }
+        };
+
+        projectImages.forEach((img, index) => {
+          img.addEventListener('click', () => {
+            currentImageIndex = index;
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+          });
+        });
+
+        if (projectImages.length <= 1) {
+          btnPrev.style.display = 'none';
+          btnNext.style.display = 'none';
+        }
+
+        btnPrev.addEventListener('click', (e) => {
+          e.stopPropagation();
+          currentImageIndex = (currentImageIndex - 1 + projectImages.length) % projectImages.length;
+          updateLightboxImage();
+        });
+
+        btnNext.addEventListener('click', (e) => {
+          e.stopPropagation();
+          currentImageIndex = (currentImageIndex + 1) % projectImages.length;
+          updateLightboxImage();
+        });
+
+        lightbox.addEventListener('click', (e) => {
+          // Close if clicking outside the image and arrows
+          if (e.target !== lightboxImg && e.target !== btnPrev && e.target !== btnNext) {
+            lightbox.classList.remove('active');
+          }
+        });
 
       } catch (error) {
         console.error(error);

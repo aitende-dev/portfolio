@@ -1,6 +1,7 @@
 /* --- Base Styles & Typography --- */
 :root {
-  --accent-red: #cc3333; /* The signature red color */
+  --accent-red: #cc3333;
+  /* The signature red color */
   --text-dark: #5e0000;
   --bg-light: #fdfdfd;
   --placeholder-gray: #e9ecef;
@@ -9,9 +10,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', Courier, monospace; /* Typewriter feel for UI */
+  font-family: 'Courier New', Courier, monospace;
+  /* Typewriter feel for UI */
   background-color: var(--bg-light);
   color: var(--text-dark);
+}
+
+* {
+  cursor: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 18,7 7,18" fill="%23cc3333"/></svg>') 0 0, auto !important;
 }
 
 a {
@@ -33,7 +39,8 @@ a:hover {
 .sidebar {
   width: 200px;
   padding: 50px 40px;
-  position: fixed; /* Keeps sidebar in place while scrolling */
+  position: fixed;
+  /* Keeps sidebar in place while scrolling */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -59,7 +66,8 @@ a:hover {
 
 /* --- Main Content (Right Column) --- */
 .content {
-  margin-left: 280px; /* Offset by sidebar width + padding */
+  margin-left: 280px;
+  /* Offset by sidebar width + padding */
   padding: 50px 40px;
   flex-grow: 1;
   max-width: 1200px;
@@ -81,23 +89,62 @@ a:hover {
 }
 
 .project-card {
-  aspect-ratio: 1 / 1; /* Makes them perfect squares */
+  aspect-ratio: 1 / 1;
+  /* Makes them perfect squares */
   background-color: var(--placeholder-gray);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: opacity 0.3s ease;
+  position: relative;
 }
 
-.project-card:hover {
-  opacity: 0.8;
+.project-card .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(253, 253, 253, 0.5); /* Slight white tint for legibility */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+  box-shadow: inset 0 0 0 6px var(--accent-red);
+}
+
+.project-card .project-name {
+  color: var(--accent-red);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  text-shadow: 0 0 15px rgba(253, 253, 253, 0.9); /* Subtle glow to ensure legibility */
+}
+
+.project-card:hover .project-name {
+  transform: scale(1);
 }
 
 .project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover img {
+  filter: grayscale(100%);
 }
 
 /* --- Project Detail Page --- */
@@ -113,9 +160,11 @@ a:hover {
 
 .project-layout {
   display: grid;
-  grid-template-columns: 3fr 2fr; /* Image takes 60%, text takes 40% */
+  grid-template-columns: 3fr 2fr;
+  /* Image takes 60%, text takes 40% */
   gap: 40px;
-  font-family: Georgia, 'Times New Roman', Times, serif; /* Better reading font for long text */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* Better reading font for long text */
 }
 
 .project-hero img {
@@ -143,39 +192,217 @@ a:hover {
   font-size: 0.9rem;
 }
 
-/* --- Vision Page Specific Styles --- */
-
-.vision-intro {
-  margin-bottom: 60px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--accent-red);
-  max-width: 800px;
+/* --- CV / About Page Styles --- */
+.cv-content {
+  max-width: 1000px;
 }
 
-.vision-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Creates two equal columns */
-  gap: 60px; /* Space between columns */
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.cv-header {
+  margin-bottom: 50px;
 }
 
-.vision-heading {
+.cv-name {
+  font-size: 2.2rem;
+  color: var(--text-dark);
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cv-contact {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin: 0;
   font-family: 'Courier New', Courier, monospace;
-  color: var(--accent-red);
-  font-size: 1.2rem;
-  font-weight: normal;
-  margin-bottom: 30px;
 }
 
-.vision-columns p {
-  line-height: 1.7;
-  font-size: 0.95rem;
+.cv-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cv-section {
+  margin-bottom: 50px;
+}
+
+.cv-heading {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--text-dark);
+  padding-bottom: 10px;
   margin-bottom: 25px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cv-subheading {
+  font-size: 1.1rem;
+  color: var(--accent-red);
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.cv-item {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.cv-date {
+  width: 150px;
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  padding-right: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.cv-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.cv-details p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.cv-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-skills-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-name {
+  width: 130px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.skill-bar {
+  flex-grow: 1;
+  height: 8px;
+  border: 1px solid var(--text-dark);
+  background-color: transparent;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #d3d3d3;
+  border-right: 1px solid var(--text-dark);
+}
+
+.cv-soft-skills {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-soft-skills li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cv-languages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-languages li {
+  display: flex;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.lang-name {
+  width: 100px;
+  font-weight: bold;
+}
+
+.lang-level {
+  color: var(--text-dark);
 }
 
 /* Helper class to make specific paragraphs red like in the screenshot */
 .text-red {
   color: var(--accent-red);
+}
+
+/* --- Lightbox --- */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(253, 253, 253, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 70vw;
+  max-height: 70vh;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+  /* For smooth transitions between images */
+}
+
+.lightbox .lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--accent-red);
+  font-size: 4rem;
+  font-family: monospace;
+  cursor: pointer;
+  padding: 20px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.1s;
+  z-index: 1001;
+}
+
+.lightbox .lightbox-nav:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox .lightbox-prev {
+  left: 30px;
+}
+
+.lightbox .lightbox-next {
+  right: 30px;
+}
+
+.project-hero img {
+  transition: opacity 0.2s ease;
+}
+
+.project-hero img:hover {
+  opacity: 0.9;
 }

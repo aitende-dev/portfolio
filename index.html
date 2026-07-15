@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architecture Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="site-wrapper">
     <aside class="sidebar">
       <div class="logo">
         <a href="index.html">
-          undertak<br>architecture
+          Anneke Iten de León<br>architecture
         </a>
       </div>
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">work</a></li>
-          <li><a href="vision.html">vision</a></li>
-          <li><a href="#">about</a></li>
+          <li><a href="about.html">about</a></li>
           <li><a href="#">contact</a></li>
         </ul>
       </nav>
     </aside>
 
     <main class="content">
-      
+
       <div class="filter-menu" id="filter-menu">
         <a href="#" data-filter="all" class="active">all projects</a>
         <a href="#" data-filter="university">university</a>
@@ -51,19 +52,32 @@
         const response = await fetch('projects.json');
         if (!response.ok) throw new Error('Failed to load projects');
         const data = await response.json();
-        
+
         // Render projects
         data.forEach(project => {
           const card = document.createElement('a');
           card.href = `project.html?id=${project.id}`;
           card.className = 'project-card';
           card.setAttribute('data-category', project.category);
-          
+
           const img = document.createElement('img');
           img.src = project.thumbnail;
           img.alt = project.shortTitle || project.title;
-          
+          if (project.thumbnailPosition) {
+            img.style.objectPosition = project.thumbnailPosition;
+          }
+
+          const overlay = document.createElement('div');
+          overlay.className = 'overlay';
+
+          const title = document.createElement('p');
+          title.className = 'project-name';
+          title.textContent = project.shortTitle || project.title;
+
+          overlay.appendChild(title);
+
           card.appendChild(img);
+          card.appendChild(overlay);
           projectGrid.appendChild(card);
         });
 
@@ -88,7 +102,7 @@
           // 3. Loop through all projects and hide/show them
           projects.forEach(project => {
             const projectCategory = project.getAttribute('data-category');
-            
+
             if (filterValue === 'all' || projectCategory === filterValue) {
               project.classList.remove('hidden'); // Show it
             } else {
@@ -101,4 +115,5 @@
   </script>
 
 </body>
+
 </html>
