@@ -408,3 +408,85 @@ a:hover {
 .project-hero img:hover {
   opacity: 0.9;
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+
+  /* Change layout to stack vertically */
+  .site-wrapper {
+    flex-direction: column;
+  }
+
+  /* Make sidebar horizontal at the top */
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    /* Stack logo and nav vertically on mobile for space */
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 100;
+    background-color: var(--bg-light);
+    /* Ensure background is solid so it covers content if it accidentally overlaps, though it shouldn't as position is relative now */
+  }
+
+  .logo {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .main-nav li {
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
+
+  /* Adjust main content to take full width */
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Stack grids into single columns */
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .filter-menu {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Stack project detail layout */
+  .project-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Stack CV layout */
+  .cv-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cv-name {
+    font-size: 1.8rem;
+  }
+
+  .cv-date {
+    width: 100px;
+    /* Narrower date column for mobile */
+  }
+}

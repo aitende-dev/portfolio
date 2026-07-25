@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Name - Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="site-wrapper">
@@ -53,9 +55,9 @@
         const response = await fetch('projects.json');
         if (!response.ok) throw new Error('Failed to load projects');
         const data = await response.json();
-        
+
         const project = data.find(p => p.id === projectId);
-        
+
         if (!project) {
           contentDiv.innerHTML = '<div style="padding: 50px; text-align: center;"><h1>Project Not Found</h1><p>The requested project does not exist.</p></div>';
           return;
@@ -161,4 +163,5 @@
   </script>
 
 </body>
+
 </html>
