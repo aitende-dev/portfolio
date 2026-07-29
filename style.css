@@ -102,23 +102,24 @@ a:hover {
 .project-card .overlay {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 100%;
+  box-sizing: border-box;
   background-color: rgba(253, 253, 253, 0.5);
   /* Slight white tint for legibility */
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease, border 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  border: 1px solid transparent; /* default transparent border */
 }
 
 .project-card:hover .overlay {
   opacity: 1;
-  box-shadow: inset 0 0 0 2px var(--accent-red);
+  border-color: var(--accent-red);
 }
 
 .project-card .project-name {
@@ -142,6 +143,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: filter 0.3s ease;
 }
 
