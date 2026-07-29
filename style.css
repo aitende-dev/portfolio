@@ -492,3 +492,76 @@ a:hover {
     /* Narrower date column for mobile */
   }
 }
+/* --- Info Layout (about.html) --- */
+.info-bio {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+.info-links {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.info-links a, .info-links span {
+  color: var(--text-dark);
+}
+
+.info-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.info-links a:hover {
+  color: var(--accent-red);
+}
+
+/* --- Tabs Navigation --- */
+.tabs-wrap {
+  margin-top: 40px;
+}
+
+.tab-menu {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--placeholder-gray);
+  flex-wrap: wrap;
+}
+
+.tab-link {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  padding-bottom: 15px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.tab-link:hover {
+  color: var(--accent-red);
+  text-decoration: none;
+}
+
+.tab-link.active {
+  color: var(--accent-red);
+  border-bottom: 2px solid var(--accent-red);
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

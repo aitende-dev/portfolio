@@ -14,7 +14,7 @@
     <aside class="sidebar">
       <div class="logo">
         <a href="index.html">
-          Anneke Iten de León<br>architecture
+          Studio<br>aitende
         </a>
       </div>
       <nav class="main-nav">
@@ -27,179 +27,180 @@
     </aside>
 
     <main class="content cv-content">
-      <div class="cv-header">
-        <p class="cv-contact">078 229 88 70 | iten.an.alt@gmail.com</p>
-      </div>
+      
+      <!-- Info Layout similar to Tim DP -->
+      <div class="info-layout">
+        
+        <div class="info-bio">
+          <p>19 /06/ 2002, Ciudad de Guatemala<br>Guatemala und Schweiz</p>
+        </div>
 
-      <div class="cv-grid">
-          <section class="cv-section">
-            <h2 class="cv-heading">About Me</h2>
-            <div class="cv-item">
-              <div class="cv-date" style="width: auto;"></div>
-              <div class="cv-details">
-                <p>19 /06/ 2002, Ciudad de Guatemala<br>Guatemala und Schweiz</p>
+        <div class="info-links">
+          <a href="mailto:iten.an.alt@gmail.com">Email</a>
+          <span>078 229 88 70</span>
+        </div>
+
+        <!-- Tabbed Interface -->
+        <div class="tabs-wrap">
+          <div class="tab-menu">
+            <a href="#" class="tab-link active" data-tab="education">Education</a>
+            <a href="#" class="tab-link" data-tab="experience">Experience</a>
+            <a href="#" class="tab-link" data-tab="skills">Skills & Languages</a>
+          </div>
+
+          <div class="tab-content">
+            <!-- Education Tab -->
+            <div id="education" class="tab-pane active">
+              <div class="cv-item">
+                <div class="cv-date">09/2025 - 02/2028</div>
+                <div class="cv-details">
+                  <h3>ETH Zürich</h3>
+                  <p>Architecture Msc</p>
+                </div>
               </div>
-            </div>
-          </section>
-
-          <section class="cv-section">
-            <h2 class="cv-heading">Education</h2>
-
-            <div class="cv-item">
-              <div class="cv-date">09/2025 - 02/2028</div>
-              <div class="cv-details">
-                <h3>ETH Zürich</h3>
-                <p>Architecture Msc</p>
+              <div class="cv-item">
+                <div class="cv-date">09/2021 - 09/2025</div>
+                <div class="cv-details">
+                  <h3>ETH Zürich</h3>
+                  <p>Architecture Bsc</p>
+                </div>
               </div>
-            </div>
-
-            <div class="cv-item">
-              <div class="cv-date">09/2021 - 09/2025</div>
-              <div class="cv-details">
-                <h3>ETH Zürich</h3>
-                <p>Architecture Bsc</p>
-              </div>
-            </div>
-
-            <div class="cv-item">
-              <div class="cv-date">01/2007 - 10/2020</div>
-              <div class="cv-details">
-                <h3>Deutsche Schule Guatemala</h3>
-                <p>Guatemala City, Guatemala</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="cv-section">
-            <h2 class="cv-heading">Experience</h2>
-            <h3 class="cv-subheading">Architecture</h3>
-
-            <div class="cv-item">
-              <div class="cv-date">09/2023 - 01/2026</div>
-              <div class="cv-details">
-                <h3>Professur Gramazio Kohler</h3>
-                <p>Teaching Assistant in Computational Design III & IV<br>Teaching Assistent in Digitales Entwerfen I
-                </p>
+              <div class="cv-item">
+                <div class="cv-date">01/2007 - 10/2020</div>
+                <div class="cv-details">
+                  <h3>Deutsche Schule Guatemala</h3>
+                  <p>Guatemala City, Guatemala</p>
+                </div>
               </div>
             </div>
 
-            <div class="cv-item">
-              <div class="cv-date">09/2023 - 08/2024</div>
-              <div class="cv-details">
-                <h3>Clou Architekten</h3>
-                <p>Internship</p>
+            <!-- Experience Tab -->
+            <div id="experience" class="tab-pane">
+              <h3 class="cv-subheading">Architecture</h3>
+              <div class="cv-item">
+                <div class="cv-date">09/2023 - 01/2026</div>
+                <div class="cv-details">
+                  <h3>Professur Gramazio Kohler</h3>
+                  <p>Teaching Assistant in Computational Design III & IV<br>Teaching Assistent in Digitales Entwerfen I</p>
+                </div>
+              </div>
+              <div class="cv-item">
+                <div class="cv-date">09/2023 - 08/2024</div>
+                <div class="cv-details">
+                  <h3>Clou Architekten</h3>
+                  <p>Internship</p>
+                </div>
+              </div>
+              <div class="cv-item">
+                <div class="cv-date">03/2021 - 06/2021</div>
+                <div class="cv-details">
+                  <h3>Corporacion Victoria, Ciudad de Guatemala</h3>
+                  <p>Drawer</p>
+                </div>
+              </div>
+              
+              <h3 class="cv-subheading" style="margin-top: 30px;">Other</h3>
+              <div class="cv-item">
+                <div class="cv-date">02/2023 - 09/2023</div>
+                <div class="cv-details">
+                  <h3>Flohmark Kanzlei, Zürich</h3>
+                  <p>Market supervisor</p>
+                </div>
               </div>
             </div>
 
-            <div class="cv-item">
-              <div class="cv-date">03/2021 - 06/2021</div>
-              <div class="cv-details">
-                <h3>Corporacion Victoria, Ciudad de Guatemala</h3>
-                <p>Drawer</p>
-              </div>
+            <!-- Skills & Languages Tab -->
+            <div id="skills" class="tab-pane">
+              <h3 class="cv-subheading">Programms</h3>
+              <ul class="cv-skills-list">
+                <li>
+                  <span class="skill-name">Rhino</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Grasshopper</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Vectorworks</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 100%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Archicad</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Adobe Premier</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 40%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Adobe Indesign</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Adobe Photoshop</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Autocad</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Office</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                </li>
+                <li>
+                  <span class="skill-name">Twinmotion</span>
+                  <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+                </li>
+              </ul>
+
+              <h3 class="cv-subheading" style="margin-top: 40px;">Soft</h3>
+              <ul class="cv-soft-skills">
+                <li>Care & attention to detail</li>
+                <li>Resilient in stressful situations</li>
+                <li>Adaptable</li>
+                <li>Quick learner</li>
+                <li>Good communication skills</li>
+              </ul>
+
+              <h3 class="cv-subheading" style="margin-top: 50px;">Languages</h3>
+              <ul class="cv-languages">
+                <li><span class="lang-name">Spanisch</span> <span class="lang-level">Native Language</span></li>
+                <li><span class="lang-name">German</span> <span class="lang-level">C1 (Advanced)</span></li>
+                <li><span class="lang-name">Englisch</span> <span class="lang-level">C1 (Advanced)</span></li>
+                <li><span class="lang-name">French</span> <span class="lang-level">A2 (Elementary)</span></li>
+                <li><span class="lang-name">Japanese</span> <span class="lang-level">Beginner</span></li>
+              </ul>
             </div>
+          </div>
+        </div>
 
-            <h3 class="cv-subheading" style="margin-top: 30px;">Other</h3>
-            <div class="cv-item">
-              <div class="cv-date">02/2023 - 09/2023</div>
-              <div class="cv-details">
-                <h3>Flohmark Kanzlei, Zürich</h3>
-                <p>Market supervisor</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="cv-section">
-            <h2 class="cv-heading">Skills</h2>
-
-            <h3 class="cv-subheading">Programms</h3>
-            <ul class="cv-skills-list">
-              <li>
-                <span class="skill-name">Rhino</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 85%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Grasshopper</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Vectorworks</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 100%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Archicad</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 85%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Adobe Premier</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 40%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Adobe Indesign</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 80%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Adobe Photoshop</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 85%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Autocad</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 65%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Office</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 90%;"></div>
-                </div>
-              </li>
-              <li>
-                <span class="skill-name">Twinmotion</span>
-                <div class="skill-bar">
-                  <div class="skill-fill" style="width: 75%;"></div>
-                </div>
-              </li>
-            </ul>
-
-            <h3 class="cv-subheading" style="margin-top: 40px;">Soft</h3>
-            <ul class="cv-soft-skills">
-              <li>Care & attention to detail</li>
-              <li>Resilient in stressful situations</li>
-              <li>Adaptable</li>
-              <li>Quick learner</li>
-              <li>Good communication skills</li>
-            </ul>
-          </section>
-
-          <section class="cv-section" style="margin-top: 50px;">
-            <h2 class="cv-heading">Languages</h2>
-            <ul class="cv-languages">
-              <li><span class="lang-name">Spanisch</span> <span class="lang-level">Native Language</span></li>
-              <li><span class="lang-name">German</span> <span class="lang-level">C1 (Advanced)</span></li>
-              <li><span class="lang-name">Englisch</span> <span class="lang-level">C1 (Advanced)</span></li>
-              <li><span class="lang-name">French</span> <span class="lang-level">A2 (Elementary)</span></li>
-              <li><span class="lang-name">Japanese</span> <span class="lang-level">Beginner</span></li>
-            </ul>
-          </section>
       </div>
     </main>
   </div>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabLinks = document.querySelectorAll('.tab-link');
+      const tabPanes = document.querySelectorAll('.tab-pane');
+
+      tabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = link.getAttribute('data-tab');
+
+          // Remove active class from all links and panes
+          tabLinks.forEach(l => l.classList.remove('active'));
+          tabPanes.forEach(p => p.classList.remove('active'));
+
+          // Add active class to clicked link and corresponding pane
+          link.classList.add('active');
+          document.getElementById(target).classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
