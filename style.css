@@ -202,7 +202,7 @@ a:hover {
 }
 
 .cv-header {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .cv-name {
@@ -221,14 +221,11 @@ a:hover {
 }
 
 .cv-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 80px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .cv-section {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .cv-heading {
@@ -236,7 +233,7 @@ a:hover {
   color: var(--text-dark);
   border-bottom: 1px solid var(--text-dark);
   padding-bottom: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
 }
@@ -250,15 +247,17 @@ a:hover {
 
 .cv-item {
   display: flex;
-  margin-bottom: 25px;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .cv-date {
-  width: 150px;
+  width: 100%;
   flex-shrink: 0;
   font-size: 0.95rem;
   color: var(--text-dark);
-  padding-right: 20px;
+  padding-right: 0;
+  margin-bottom: 5px;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -325,6 +324,7 @@ a:hover {
 
 .cv-languages li {
   display: flex;
+  flex-direction: column;
   margin-bottom: 12px;
   font-size: 0.95rem;
 }
