@@ -285,6 +285,21 @@ a:hover {
   align-items: center;
 }
 
+.cv-skills-list.no-bars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cv-skills-list.no-bars li {
+  margin-bottom: 0;
+  padding: 8px 15px;
+  background-color: var(--bg-light);
+  border: 1px solid var(--text-dark);
+  font-size: 0.95rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .skill-name {
   width: 130px;
   font-size: 0.9rem;
