@@ -285,19 +285,28 @@ a:hover {
   align-items: center;
 }
 
-.cv-skills-list.no-bars {
+.cv-skills-list.dots-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-direction: column;
 }
 
-.cv-skills-list.no-bars li {
-  margin-bottom: 0;
-  padding: 8px 15px;
-  background-color: var(--bg-light);
-  border: 1px solid var(--text-dark);
+.cv-skills-list.dots-list li {
+  margin-bottom: 8px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
   font-size: 0.95rem;
   font-family: 'Courier New', Courier, monospace;
+}
+
+.cv-skills-list.dots-list .skill-dots {
+  color: var(--accent-red);
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.cv-skills-list.dots-list .skill-name {
+  width: 180px;
 }
 
 .skill-name {
@@ -508,30 +517,44 @@ a:hover {
   }
 }
 /* --- Info Layout (about.html) --- */
-.info-bio {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 800px;
-}
-
-.info-links {
+.info-header-top {
   display: flex;
-  gap: 30px;
-  margin-bottom: 50px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.info-links-new {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   font-size: 1.1rem;
+  flex-shrink: 0;
+  text-align: right;
 }
 
-.info-links a, .info-links span {
+.info-links-new a {
   color: var(--text-dark);
-}
-
-.info-links a {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-.info-links a:hover {
+
+.info-links-new a:hover {
   color: var(--accent-red);
+}
+
+.info-bio-new {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 450px;
+  text-align: left;
+}
+
+.info-bio-new h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 /* --- Tabs Navigation --- */
