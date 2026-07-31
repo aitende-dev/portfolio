@@ -539,9 +539,10 @@ a:hover {
     gap: 15px;
   }
 
-  /* Stack project detail layout */
+  /* Stack project detail layout with text before images */
   .project-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     gap: 20px;
   }
 
