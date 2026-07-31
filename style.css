@@ -485,9 +485,9 @@ a:hover {
     box-sizing: border-box;
   }
 
-  /* Stack grids into single columns */
+  /* Stack grids into two columns instead of one on mobile */
   .project-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
