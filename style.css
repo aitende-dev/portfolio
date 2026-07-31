@@ -11,7 +11,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
+  font-weight: 500;
   /* Typewriter feel for UI */
   background-color: var(--bg-light);
   color: var(--text-dark);
@@ -489,6 +489,48 @@ a:hover {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    row-gap: 25px; /* Extra space for the title below */
+  }
+
+  /* Show titles below images on mobile */
+  .project-card {
+    aspect-ratio: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+  }
+
+  .project-card img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+  }
+
+  .project-card .overlay {
+    position: static;
+    opacity: 1;
+    padding: 0;
+    background-color: transparent;
+    height: auto;
+    border: none;
+    justify-content: flex-start;
+  }
+
+  .project-card:hover .overlay {
+    border: none;
+    background-color: transparent;
+  }
+
+  .project-card .project-name {
+    transform: none;
+    text-shadow: none;
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .project-card:hover .project-name {
+    transform: none;
   }
 
   .filter-menu {
