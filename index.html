@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architecture Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -27,11 +28,12 @@
 
     <main class="content">
 
-      <div class="filter-menu" id="filter-menu">
-        <a href="#" data-filter="all" class="active">all projects</a>
-        <a href="#" data-filter="university">university</a>
-        <a href="#" data-filter="work">work</a>
-        <a href="#" data-filter="personal">personal</a>
+      <div class="filter-menu" id="filter-menu" style="align-items: center; flex-wrap: wrap;">
+        <a href="#" data-filter="featured" class="active"><i class="fa-solid fa-star"></i><span class="filter-text">featured</span></a>
+        <a href="#" data-filter="university"><i class="fa-solid fa-building-columns"></i><span class="filter-text">university</span></a>
+        <a href="#" data-filter="work"><i class="fa-solid fa-briefcase"></i><span class="filter-text">work</span></a>
+        <a href="#" data-filter="personal"><i class="fa-solid fa-asterisk"></i><span class="filter-text">personal</span></a>
+        <a href="#" data-filter="all"><i class="fa-solid fa-layer-group"></i><span class="filter-text">all projects</span></a>
       </div>
 
       <div class="project-grid" id="project-grid">
@@ -101,8 +103,9 @@
           // 3. Loop through all projects and hide/show them
           projects.forEach(project => {
             const projectCategory = project.getAttribute('data-category');
+            const categories = projectCategory ? projectCategory.split(' ') : [];
 
-            if (filterValue === 'all' || projectCategory === filterValue) {
+            if (filterValue === 'all' || categories.includes(filterValue)) {
               project.classList.remove('hidden'); // Show it
             } else {
               project.classList.add('hidden'); // Hide it
