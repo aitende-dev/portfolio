@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architecture Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -22,6 +22,7 @@
         <ul>
           <li><a href="index.html">work</a></li>
           <li><a href="info.html">info</a></li>
+          <li><a href="contact.html">contact</a></li>
         </ul>
       </nav>
     </aside>
@@ -84,6 +85,21 @@
 
         // Re-query the projects now that they are in the DOM
         projects = document.querySelectorAll('.project-card');
+
+        // Apply initial filter based on active tab
+        const activeTab = document.querySelector('.filter-menu a.active');
+        if (activeTab) {
+          const filterValue = activeTab.getAttribute('data-filter');
+          projects.forEach(project => {
+            const projectCategory = project.getAttribute('data-category');
+            const categories = projectCategory ? projectCategory.split(' ') : [];
+            if (filterValue === 'all' || categories.includes(filterValue)) {
+              project.classList.remove('hidden');
+            } else {
+              project.classList.add('hidden');
+            }
+          });
+        }
       } catch (error) {
         console.error(error);
         projectGrid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Error loading projects.</p>';

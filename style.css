@@ -89,6 +89,7 @@ a:hover {
 }
 
 .filter-text {
+  display: inline-block;
   max-width: 0;
   opacity: 0;
   white-space: nowrap;
@@ -507,6 +508,25 @@ a:hover {
     box-sizing: border-box;
   }
 
+  /* Keep info tabs on a single line on mobile */
+  .tab-menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding-bottom: 5px;
+  }
+
+  /* Hide scrollbar for a cleaner look */
+  .tab-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-link {
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+
   /* Stack grids into two columns instead of one on mobile */
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -681,4 +701,8 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.hidden {
+  display: none !important;
 }
