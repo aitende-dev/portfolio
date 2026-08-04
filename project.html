@@ -95,6 +95,8 @@
               <h2>${project.shortTitle || project.title}</h2>
               ${descriptionHtml}
               <div class="project-meta">
+                ${project.Semester ? `<p><strong>Semester:</strong> ${project.Semester}</p>` : ''}
+                ${project.Studio ? `<p><strong>Studio:</strong> ${project.Studio}</p>` : ''}
                 ${project.materials ? `<p><strong>Materials:</strong> ${project.materials}</p>` : ''}
                 ${project.phase ? `<p><strong>Phase:</strong> ${project.phase}</p>` : ''}
                 ${project.collaborator ? `<p><strong>Collaborator:</strong> ${project.collaborator}</p>` : ''}

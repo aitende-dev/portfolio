@@ -1,9 +1,9 @@
 [
   {
     "id": "21HS",
-    "title": "21HS",
+    "title": "Atelier House",
     "shortTitle": "21HS",
-    "category": "university featured",
+    "category": "university",
     "thumbnail": "website-fotos/21HS/21HS-Ansicht-Schnitt1.jpg",
     "thumbnailPosition": "left",
     "heroImage": "website-fotos/21HS/21HS-Ansicht-Schnitt1.jpg",
@@ -21,10 +21,10 @@
       "website-fotos/21HS/21HS-Skizzen-3.jpg"
     ],
     "description": [
-      "Details about the 21HS project will go here."
+      "The Atelier house was the first proyect of my university studies. Its an excercise that stemt from the new found typology of living, where remote work was the norm in 2020. In my concept of the atelier the person could live underground and work above. Inspired by organic cave systems the plan adapts this form to the new way of leaving. The deeper in the programm the more underground the rooms would be placed. The programm also dictates the arangement of the rooms. With the most social kitchen and dining room in the middle and the more private in the back. The underground space has a vaulted ceiling with round windows that allow the air to flow and light to come through. Overall the proyects goal was to explore the posibilities of underground living and above working."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
+    "Semester": "1st Bachelor Semester",
+    "Studio": "Prof. Deplazes",
     "collaborator": "TBD"
   },
   {
