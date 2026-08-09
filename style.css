@@ -38,9 +38,11 @@ a:hover {
 
 /* --- Sidebar (Left Column) --- */
 .sidebar {
-  width: 100px;
-  padding: 50px 40px;
+  width: 260px;
+  padding: 50px 0;
   position: fixed;
+  left: 0;
+  top: 0;
   /* Keeps sidebar in place while scrolling */
   height: 100vh;
   display: flex;
@@ -52,12 +54,23 @@ a:hover {
   line-height: 1.2;
   margin-bottom: 80px;
   letter-spacing: 1px;
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.main-nav {
+  width: 140px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 
 .main-nav li {
@@ -67,8 +80,8 @@ a:hover {
 
 /* --- Main Content (Right Column) --- */
 .content {
-  margin-left: 180px;
-  /* Offset by sidebar width + padding */
+  margin-left: 220px;
+  /* Offset to make gallery start at 260px (220 + 40 padding) */
   padding: 50px 40px;
   flex-grow: 1;
   max-width: 1200px;
@@ -531,7 +544,8 @@ a:hover {
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-    row-gap: 25px; /* Extra space for the title below */
+    row-gap: 25px;
+    /* Extra space for the title below */
   }
 
   /* Show titles below images on mobile */
