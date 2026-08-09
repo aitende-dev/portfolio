@@ -52,7 +52,7 @@
       }
 
       try {
-        const response = await fetch('projects.json');
+        const response = await fetch('projects.json?t=' + new Date().getTime());
         if (!response.ok) throw new Error('Failed to load projects');
         const data = await response.json();
 
