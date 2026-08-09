@@ -38,7 +38,7 @@ a:hover {
 
 /* --- Sidebar (Left Column) --- */
 .sidebar {
-  width: 200px;
+  width: 100px;
   padding: 50px 40px;
   position: fixed;
   /* Keeps sidebar in place while scrolling */
@@ -67,7 +67,7 @@ a:hover {
 
 /* --- Main Content (Right Column) --- */
 .content {
-  margin-left: 280px;
+  margin-left: 180px;
   /* Offset by sidebar width + padding */
   padding: 50px 40px;
   flex-grow: 1;

@@ -64,14 +64,18 @@
         }
 
         // Update page title
-        document.title = `${project.shortTitle || project.title} - Portfolio`;
+        document.title = `${project.title} - Portfolio`;
 
         // Build extra images HTML
         let extraImagesHtml = '';
         if (project.extraImages && project.extraImages.length > 0) {
-          const imgTags = project.extraImages.map(src => `<img src="${src}" alt="Additional Image" style="width: 100%; display: block; margin-bottom: 20px;">`).join('');
-          extraImagesHtml = `<div style="margin-top: 40px; column-count: 2; column-gap: 20px;">
-              ${imgTags}
+          const half = Math.ceil(project.extraImages.length / 2);
+          const col1 = project.extraImages.slice(0, half).map(src => `<img src="${src}" alt="Additional Image" style="width: 100%; display: block; margin-bottom: 20px;">`).join('');
+          const col2 = project.extraImages.slice(half).map(src => `<img src="${src}" alt="Additional Image" style="width: 100%; display: block; margin-bottom: 20px;">`).join('');
+          
+          extraImagesHtml = `<div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div>${col1}</div>
+              <div>${col2}</div>
           </div>`;
         }
 
@@ -92,8 +96,6 @@
               ${extraImagesHtml}
             </div>
             <div class="project-info">
-              <h2>${project.shortTitle || project.title}</h2>
-              ${descriptionHtml}
               <div class="project-meta">
                 ${project.Semester ? `<p><strong>Semester:</strong> ${project.Semester}</p>` : ''}
                 ${project.Studio ? `<p><strong>Studio:</strong> ${project.Studio}</p>` : ''}
@@ -101,6 +103,7 @@
                 ${project.phase ? `<p><strong>Phase:</strong> ${project.phase}</p>` : ''}
                 ${project.collaborator ? `<p><strong>Collaborator:</strong> ${project.collaborator}</p>` : ''}
               </div>
+              ${descriptionHtml}
             </div>
           </div>
         `;

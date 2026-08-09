@@ -2,7 +2,6 @@
   {
     "id": "21HS",
     "title": "Atelier House",
-    "shortTitle": "21HS",
     "category": "university",
     "thumbnail": "website-fotos/21HS/21HS-Ansicht-Schnitt1.jpg",
     "thumbnailPosition": "left",
@@ -13,24 +12,20 @@
       "website-fotos/21HS/21HS-Axonometrie.jpg",
       "website-fotos/21HS/21HS-Grundriss1.jpg",
       "website-fotos/21HS/21HS-Grundriss2.jpg",
-      "website-fotos/21HS/21HS-Page-1.jpg",
-      "website-fotos/21HS/21HS-Page-2.jpg",
       "website-fotos/21HS/21HS-Render.jpg",
       "website-fotos/21HS/21HS-Skizzen-1.jpg",
       "website-fotos/21HS/21HS-Skizzen-2.jpg",
       "website-fotos/21HS/21HS-Skizzen-3.jpg"
     ],
     "description": [
-      "The Atelier house was the first proyect of my university studies. Its an excercise that stemt from the new found typology of living, where remote work was the norm in 2020. In my concept of the atelier the person could live underground and work above. Inspired by organic cave systems the plan adapts this form to the new way of leaving. The deeper in the programm the more underground the rooms would be placed. The programm also dictates the arangement of the rooms. With the most social kitchen and dining room in the middle and the more private in the back. The underground space has a vaulted ceiling with round windows that allow the air to flow and light to come through. Overall the proyects goal was to explore the posibilities of underground living and above working."
+      "The Atelier house was the first proyect of my first year at university. Its an excercise that stemt from the new found typology of living, where remote work was the norm in 2020. In my concept of the atelier the person could live underground and work above. Inspired by organic cave systems the plan adapts this form to the new way of leaving. The deeper in the programm the more underground the rooms would be placed. The programm also dictates the arangement of the rooms. With the most social kitchen and dining room in the middle and the more private in the back. The underground space has a vaulted ceiling with round windows that allow the air to flow and light to come through. Overall the proyects goal was to explore the posibilities of underground living and above working."
     ],
     "Semester": "1st Bachelor Semester",
-    "Studio": "Prof. Deplazes",
-    "collaborator": "TBD"
+    "Studio": "Prof. Deplazes"
   },
   {
     "id": "22FS",
     "title": "22FS",
-    "shortTitle": "22FS",
     "category": "university",
     "thumbnail": "website-fotos/22FS/22FS-Icon.png",
     "heroImage": "website-fotos/22FS/22FS-Icon.png",
@@ -64,7 +59,6 @@
   {
     "id": "22HS",
     "title": "22HS",
-    "shortTitle": "22HS",
     "category": "university",
     "thumbnail": "website-fotos/22HS/22HS-ActorNetwork.jpg",
     "heroImage": "website-fotos/22HS/22HS-ActorNetwork.jpg",
@@ -97,7 +91,6 @@
   {
     "id": "23FS",
     "title": "23FS",
-    "shortTitle": "23FS",
     "category": "university",
     "thumbnail": "website-fotos/23FS/23FS-ActorNetwork.jpeg",
     "heroImage": "website-fotos/23FS/23FS-ActorNetwork.jpeg",
@@ -130,7 +123,6 @@
   {
     "id": "23FS-Tragwerk",
     "title": "23FS-Tragwerk",
-    "shortTitle": "23FS-Tragwerk",
     "category": "university",
     "thumbnail": "website-fotos/23FS-Tragwerk/23FS-trag-concept.jpg",
     "heroImage": "website-fotos/23FS-Tragwerk/23FS-trag-concept.jpg",
@@ -174,7 +166,6 @@
   {
     "id": "24HS",
     "title": "24HS",
-    "shortTitle": "24HS",
     "category": "university",
     "thumbnail": "website-fotos/24HS/24HS-Collage.png",
     "heroImage": "website-fotos/24HS/24HS-Collage.png",
@@ -207,7 +198,6 @@
   {
     "id": "24HS25FS-Klima",
     "title": "24HS25FS-Klima",
-    "shortTitle": "24HS25FS-Klima",
     "category": "university",
     "thumbnail": "website-fotos/24HS25FS-Klima/24HS25FS-Klima2_Icon.png",
     "heroImage": "website-fotos/24HS25FS-Klima/24HS25FS-Klima2_Icon.png",
@@ -233,7 +223,6 @@
   {
     "id": "25FS",
     "title": "25FS",
-    "shortTitle": "25FS",
     "category": "university",
     "thumbnail": "website-fotos/25FS/25FS-Diagramms3. png.png",
     "heroImage": "website-fotos/25FS/25FS-Diagramms3. png.png",
@@ -280,7 +269,6 @@
   {
     "id": "25HS-Coding",
     "title": "25HS-Coding",
-    "shortTitle": "25HS-Coding",
     "category": "university",
     "thumbnail": "website-fotos/25HS-Coding/25HSCoding-1.png",
     "heroImage": "website-fotos/25HS-Coding/25HSCoding-1.png",
