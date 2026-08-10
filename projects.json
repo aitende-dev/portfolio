@@ -25,16 +25,15 @@
   },
   {
     "id": "22FS",
-    "title": "22FS",
+    "title": "Pixelated Poblenou",
     "category": "university",
-    "thumbnail": "website-fotos/22FS/22FS-Icon.png",
-    "heroImage": "website-fotos/22FS/22FS-Icon.png",
+    "thumbnail": "website-fotos/22FS/22FS-Interior.png",
+    "heroImage": "website-fotos/22FS/22FS-Interior.png",
     "extraImages": [
       "website-fotos/22FS/22FS-Blatt-Grundrisse.jpg",
       "website-fotos/22FS/22FS-Blatt-Grundrisse1.jpg",
       "website-fotos/22FS/22FS-Blatt1.jpg",
       "website-fotos/22FS/22FS-Blatt2.jpg",
-      "website-fotos/22FS/22FS-Interior.png",
       "website-fotos/22FS/22FS-Model1.jpeg",
       "website-fotos/22FS/22FS-Model2.png",
       "website-fotos/22FS/22FS-Model3.png",
@@ -42,94 +41,78 @@
       "website-fotos/22FS/22FS-Model5.png",
       "website-fotos/22FS/22FS-Model6.png",
       "website-fotos/22FS/22FS-Model7.png",
-      "website-fotos/22FS/22FS-Model8.jpeg",
-      "website-fotos/22FS/Kunst/22HSKunst-2.jpg",
-      "website-fotos/22FS/Kunst/22HSKunst-3.jpg",
-      "website-fotos/22FS/Kunst/22HSKunst-4.jpg",
-      "website-fotos/22FS/Kunst/22HSKunst-5.jpg",
-      "website-fotos/22FS/Kunst/22HSKunst-6.jpg"
+      "website-fotos/22FS/22FS-Model8.jpeg"
     ],
     "description": [
-      "Details about the 22FS project will go here."
+      "The Pixelated Poblenou is an urban design exploration project where urban densification was a key focus.\n\nThe concept began with a single volume, which was then arranged and reorganized. Once this base module was developed, three different versions were created. The only difference between them was the height of the bedrooms, which were positioned at either 3 m,\n4.5 m, or 6 m above street level.\n\nThe modules were then positioned side by side within the block to create various public spaces. The concept was designed so that from above, it resembles a carpet with nine holes, while from below, it features multiple entrances and connections—functioning as a bottom-up concept.\n\nFollowing the development of the urban concept, the individual house module was designed. It featured a workspace on the ground floor and a living area on the upper floors. The primary focus of the living area was to mirror the overarching urban concept of the module itself.\n\nThe different floors were all connected, much like the terraces, which formed the core concept of the living section. In the upper part of the houses, there are interconnected terraces that residents could access to walk to other houses. Ultimately, while the lower level was fully public, the upper level served as a private-public space specifically for the homeowners."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "2nd Bachelor Semester",
+    "Studio": "Prof. Deplazes"
   },
   {
     "id": "22HS",
-    "title": "22HS",
-    "category": "university",
-    "thumbnail": "website-fotos/22HS/22HS-ActorNetwork.jpg",
-    "heroImage": "website-fotos/22HS/22HS-ActorNetwork.jpg",
+    "title": "The L units",
+    "category": "university, featured",
+    "thumbnail": "website-fotos/22HS/22HS-Model-8.png",
+    "heroImage": "website-fotos/22HS/22HS-Model-8.png",
     "extraImages": [
+      "website-fotos/22HS/22HS-ActorNetwork.jpg",
       "website-fotos/22HS/22HS-Ansicht1.jpg",
       "website-fotos/22HS/22HS-Ansicht2.png",
       "website-fotos/22HS/22HS-Grundriss1.png",
       "website-fotos/22HS/22HS-Grundriss2.png",
       "website-fotos/22HS/22HS-Grundriss3.png",
-      "website-fotos/22HS/22HS-Layout.jpg",
+      "website-fotos/22HS/22HS-Schnitt1.jpg",
+      "website-fotos/22HS/22HS-Schnitt2.png",
+      "website-fotos/22HS/22HS-Schnitt3.png",
       "website-fotos/22HS/22HS-Model-1.png",
       "website-fotos/22HS/22HS-Model-2.png",
       "website-fotos/22HS/22HS-Model-3.png",
       "website-fotos/22HS/22HS-Model-4.png",
       "website-fotos/22HS/22HS-Model-5.png",
       "website-fotos/22HS/22HS-Model-6.png",
-      "website-fotos/22HS/22HS-Model-7.png",
-      "website-fotos/22HS/22HS-Model-8.png",
-      "website-fotos/22HS/22HS-Schnitt1.jpg",
-      "website-fotos/22HS/22HS-Schnitt2.png",
-      "website-fotos/22HS/22HS-Schnitt3.png"
+      "website-fotos/22HS/22HS-Model-7.png"
     ],
     "description": [
-      "Details about the 22HS project will go here."
+      "The house was designed to see the potential of the L form in a small volume. With a size of roughly 8 by 8 m and two stories Due to its size, the houses are built out of a post beam wooden structure on a concrete base. Wood was chosen for its material feel and sustainable characteristic. On the other hand, concrete was only used on the foundation, because it is partially under the terra. The central area is defined by the arrangement of the houses. These were placed in a circle, but still following the lines of the terra and the terrace direction to the south. The houses were placed spaced out to create the central public space, but also close enough to each other to create a unity feel between the houses. Around the houses there is untouched terra left for gardening or just walking. The central space is divided in two platforms, to access the two levels at which the entrances are located. The two levels are connected through a flight of stairs which also serves as smaller platforms with sitting space. The two open spaces serve the purpose of community space that can be adapted to organise different events, like grills and birthday parties or even sports. This space is not only for the habitants of the houses, but can also be used by anybody that wants to enjoy it."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "3rd Bachelor Semester",
+    "Studio": "Prof. Deplazes"
   },
   {
     "id": "23FS",
-    "title": "23FS",
-    "category": "university",
-    "thumbnail": "website-fotos/23FS/23FS-ActorNetwork.jpeg",
-    "heroImage": "website-fotos/23FS/23FS-ActorNetwork.jpeg",
+    "title": "Wavy Oasis",
+    "category": "university, featured",
+    "thumbnail": "website-fotos/23FS/23FS-images2.jpg",
+    "heroImage": "website-fotos/23FS/23FS-images2.jpg",
     "extraImages": [
+      "website-fotos/23FS/23FS-ActorNetwork.jpeg",
       "website-fotos/23FS/23FS-Report1.jpg",
-      "website-fotos/23FS/23FS-Report10.jpg",
-      "website-fotos/23FS/23FS-Report11.jpg",
-      "website-fotos/23FS/23FS-Report2.jpg",
-      "website-fotos/23FS/23FS-Report3.jpg",
-      "website-fotos/23FS/23FS-Report4.jpg",
-      "website-fotos/23FS/23FS-Report5.jpg",
-      "website-fotos/23FS/23FS-Report6.jpg",
       "website-fotos/23FS/23FS-Report7.jpg",
       "website-fotos/23FS/23FS-Report8.jpg",
       "website-fotos/23FS/23FS-Report9.jpg",
+      "website-fotos/23FS/23FS-Report10.jpg",
       "website-fotos/23FS/23FS-furniture1.JPG",
       "website-fotos/23FS/23FS-furniture2.JPG",
-      "website-fotos/23FS/23FS-furniture3.JPG",
-      "website-fotos/23FS/23FS-images1.jpg",
-      "website-fotos/23FS/23FS-images2.jpg",
-      "website-fotos/23FS/23FS-images3.png"
+      "website-fotos/23FS/23FS-furniture3.JPG"
     ],
     "description": [
-      "Details about the 23FS project will go here."
+      "The Wavy Oasis project was an investigation into the characteristics of public spaces. It started as a competition and then developed into a collaborative group project where six members comprehensively researched, planned, and ultimately implemented an idea. The inspiration for this piece of furniture came from the topography of the ground, which featured an undulating, wavy texture. Throughout the conceptualization process, various iterations of the furniture were explored in terms of comfort, materiality, construction, form, and landscaping integration. The furniture piece consisted of six main waves that were ergonomically designed and connected with wooden boards. These ergonomic waves were parameterized using the Grasshopper software to find the most optimal shape, with a special emphasis placed on user comfort. The idea behind the design was that you could see through the boards to the ground below. Furthermore, when lying down on it, users were perfectly positioned to look up at the sky and the surrounding trees. Wood was chosen as the primary material so that the structure would blend into its natural surroundings, as well as for its ease of processing and workability. The final version of the furniture piece was built within two weeks and remained on display at a site on the ETH Hönggerberg campus for five months."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "4th Bachelor Semester",
+    "Studio": "Prof. Kaijima",
+    "Collaborator": "Group Work"
   },
   {
     "id": "23FS-Tragwerk",
-    "title": "23FS-Tragwerk",
+    "title": "Infinity Bridge",
     "category": "university",
-    "thumbnail": "website-fotos/23FS-Tragwerk/23FS-trag-concept.jpg",
-    "heroImage": "website-fotos/23FS-Tragwerk/23FS-trag-concept.jpg",
+    "thumbnail": "website-fotos/23FS-Tragwerk/23FS-trag-images2.jpg",
+    "heroImage": "website-fotos/23FS-Tragwerk/23FS-trag-images2.jpg",
     "extraImages": [
+      "website-fotos/23FS-Tragwerk/23FS-trag-concept.jpg",
       "website-fotos/23FS-Tragwerk/23FS-trag-details.jpg",
       "website-fotos/23FS-Tragwerk/23FS-trag-images1.jpg",
-      "website-fotos/23FS-Tragwerk/23FS-trag-images2.jpg",
       "website-fotos/23FS-Tragwerk/23FS-trag-images3.jpg",
       "website-fotos/23FS-Tragwerk/23FS-trag-plaene1.jpg",
       "website-fotos/23FS-Tragwerk/23FS-trag-plaene2.jpg",
@@ -157,16 +140,16 @@
       "website-fotos/23FS-Tragwerk/23FS-trag-proces9.jpg"
     ],
     "description": [
-      "Details about the 23FS-Tragwerk project will go here."
+      "Our vision is to construct a magnificent bridge that spans the entire width of the river, spanning an impressive distance of 110 meters. Initially, we planned to separate the pedestrian and sunbathing functions to ensure optimal use of the space without interfering with each other. After careful consideration, we decided to allocate the sunbathing area exclusively to the Limmat Oberwasserkanal side of the bridge, which will be located below the pedestrian walkway for safety purposes. Additionally, we recognized the significant distance between the two neighboring bridges and designed our bridge to provide pedestrians with a convenient shortcut. As the bridge is considerably lengthy and requires a middle descent, we chose a design that could maintain its equilibrium. The design we chose was the \"infinitive ∞\" form, which extends across the entire bridge while maintaining the same level of stability for the support systems on either side. In order to achieve our goal of separating the pedestrian and sunbathing areas, we have created three pathways. The pedestrian walkway is in the middle and stretches 3.5 meters in width. The other two pathways are situated on either side of the pedestrian walkway, providing ample space for sunbathing. On the Limmat Oberwasserkanal side, the sunbathing pathway is lower to allow for easy access to the river for swimming. Conversely, the path on the other side is elevated since the water level is not suitable for swimming."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "4th and 5th Bachelor Semester",
+    "Course": "Structural design III & IV",
+    "Collaborator": "Group Work"
   },
   {
     "id": "24HS",
-    "title": "24HS",
-    "category": "university",
+    "title": "Museum of Stories",
+    "category": "university,featured",
     "thumbnail": "website-fotos/24HS/24HS-Collage.png",
     "heroImage": "website-fotos/24HS/24HS-Collage.png",
     "extraImages": [
@@ -174,26 +157,26 @@
       "website-fotos/24HS/24HS-ansicht2.jpg",
       "website-fotos/24HS/24HS-details1.jpg",
       "website-fotos/24HS/24HS-details2.jpg",
+      "website-fotos/24HS/24HS-situationsplan.jpg",
       "website-fotos/24HS/24HS-grundriss1.jpg",
       "website-fotos/24HS/24HS-grundriss2.jpg",
       "website-fotos/24HS/24HS-grundriss3.jpg",
+      "website-fotos/24HS/24HS-schnitt1.jpg",
+      "website-fotos/24HS/24HS-schnitt2.jpg",
+      "website-fotos/24HS/24HS-schnitt3.jpg",
       "website-fotos/24HS/24HS-image1.jpg",
       "website-fotos/24HS/24HS-image2.jpg",
       "website-fotos/24HS/24HS-image3.jpg",
       "website-fotos/24HS/24HS-image4.jpg",
       "website-fotos/24HS/24HS-image5.jpg",
-      "website-fotos/24HS/24HS-image6.jpg",
-      "website-fotos/24HS/24HS-schnitt1.jpg",
-      "website-fotos/24HS/24HS-schnitt2.jpg",
-      "website-fotos/24HS/24HS-schnitt3.jpg",
-      "website-fotos/24HS/24HS-situationsplan.jpg"
+      "website-fotos/24HS/24HS-image6.jpg"
     ],
     "description": [
-      "Details about the 24HS project will go here."
+      "The Museum of Stories redefines the traditional museum as a participatory living organism that centers writing and recording as vital tools for reflection, healing, and social connection. Architecturally, the project transforms a colonial-funded historic villa into a space of critical transparency, stripping back ceilings to expose its problematic past. This structure connects to a central rammed-earth core and the Black Box; a modern retreat housing private writing pods and contemplative lounges. Through innovative features like vertical glass tubes that circulate visitor texts and a facade that projects personal narratives to the public, the museum transcends mere representation to become an active, evolving platform for individual voices and collective cultural exchange."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "5th Bachelor Semester",
+    "Studio": "Prof. Issoufou",
+    "Collaborator": "group project"
   },
   {
     "id": "24HS25FS-Klima",
@@ -214,89 +197,65 @@
       "website-fotos/24HS25FS-Klima/24HS25FS-Klima9.jpg"
     ],
     "description": [
-      "Details about the 24HS25FS-Klima project will go here."
+      "Built in 1928 by Max Ernst Haefeli, Zurich's Rotach-Hauser are icons of \"Neues Bauen\". To address their uninsulated envelopes and obsolete systems, our \"Energy and Climate Design\" project developed a gentle renovation strategy that balances heritage conservation with modern efficiency. The proposal replaces outdated heating with photovoltaics and heat pumps while introducing insulating plaster, roof insulation, and high-performance glazing. Following a three-step methodology - analyzing site potentials, energy demand, and supply concepts - this holistic approach transforms the landmarked structures into resource-efficient, future-ready homes. By integrating innovative technology with respect for original materiality, the project ensures the Rotach-Hauser meet contemporary climate standards without compromising their architectural integrity."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "5th Bachelor Semester",
+    "Course": "Energy and Climate Design I & II",
+    "Collaborator": "group project"
   },
   {
     "id": "25FS",
-    "title": "25FS",
-    "category": "university",
-    "thumbnail": "website-fotos/25FS/25FS-Diagramms3. png.png",
-    "heroImage": "website-fotos/25FS/25FS-Diagramms3. png.png",
+    "title": "Living at Barfi",
+    "category": "university,featured",
+    "thumbnail": "website-fotos/25FS/25FS-image1.png",
+    "heroImage": "website-fotos/25FS/25FS-image1.png",
     "extraImages": [
-      "website-fotos/25FS/25FS-Diagramms_Page_1.png",
-      "website-fotos/25FS/25FS-Diagramms_Page_2.png",
-      "website-fotos/25FS/25FS-Diagramms_Page_3.png",
-      "website-fotos/25FS/25FS-ansicht1.png",
-      "website-fotos/25FS/25FS-ansicht2.png",
-      "website-fotos/25FS/25FS-ansicht3.png",
-      "website-fotos/25FS/25FS-ansicht4.png",
-      "website-fotos/25FS/25FS-details1.png",
-      "website-fotos/25FS/25FS-details2.png",
-      "website-fotos/25FS/25FS-grundriss1.png",
-      "website-fotos/25FS/25FS-grundriss10.png",
-      "website-fotos/25FS/25FS-grundriss11.png",
-      "website-fotos/25FS/25FS-grundriss12.png",
-      "website-fotos/25FS/25FS-grundriss2.png",
-      "website-fotos/25FS/25FS-grundriss3.png",
-      "website-fotos/25FS/25FS-grundriss4.png",
-      "website-fotos/25FS/25FS-grundriss5.png",
-      "website-fotos/25FS/25FS-grundriss6.png",
-      "website-fotos/25FS/25FS-grundriss7.png",
-      "website-fotos/25FS/25FS-grundriss8.png",
-      "website-fotos/25FS/25FS-grundriss9.png",
-      "website-fotos/25FS/25FS-image1.png",
       "website-fotos/25FS/25FS-image2.png",
       "website-fotos/25FS/25FS-image3.png",
       "website-fotos/25FS/25FS-image4.jpg",
       "website-fotos/25FS/25FS-image5.jpg",
       "website-fotos/25FS/25FS-image6.png",
       "website-fotos/25FS/25FS-image7.png",
-      "website-fotos/25FS/25FS-schnitt1.png",
-      "website-fotos/25FS/25FS-schnitt2.png",
-      "website-fotos/25FS/25FS-situation.png"
+      "website-fotos/25FS/25FS-ansicht1.png",
+      "website-fotos/25FS/25FS-ansicht2.png",
+      "website-fotos/25FS/25FS-ansicht3.png",
+      "website-fotos/25FS/25FS-ansicht4.png",
+      "website-fotos/25FS/25FS-details1.png",
+      "website-fotos/25FS/25FS-details2.png",
+      "website-fotos/25FS/25FS-grundriss5.png",
+      "website-fotos/25FS/25FS-grundriss6.png",
+      "website-fotos/25FS/25FS-grundriss7.png",
+      "website-fotos/25FS/25FS-grundriss8.png",
+      "website-fotos/25FS/25FS-grundriss11.png",
+      "website-fotos/25FS/25FS-grundriss12.png",
+      "website-fotos/25FS/25FS-situation.png",
+      "website-fotos/25FS/25FS-schnitt2.png"
     ],
     "description": [
-      "Details about the 25FS project will go here."
+      "This project converts the historic Basel City Casino on Barfiisserplatz into a residential building, addressing local housing demands. \"Barfi\" is the nickname for the plaza next to the Casino. Balancing preservation and renewal, the design retains the protected facades and structural core while completely housing the interior. The ground floor remains a public space, featuring a repair cafe and new city entrances. Above, a diverse mix of barrier-free and maisonette apartments, capped by penthouses, will house approximately 45 residents. The exterior is reimagined to establish an independent residential character, featuring a revitalized east facade with a wraparound balcony and a historically inspired rounded forecourt. At the core of the project, was the intention of details and how this historical building could be saved from its current underused state."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "6th Bachelor Semester",
+    "Studio": "Guest Studio Beer & Merz",
+    "Collaborator": "group project"
   },
   {
     "id": "25HS-Coding",
-    "title": "25HS-Coding",
+    "title": "Glitchwater",
     "category": "university",
-    "thumbnail": "website-fotos/25HS-Coding/25HSCoding-1.png",
-    "heroImage": "website-fotos/25HS-Coding/25HSCoding-1.png",
+    "thumbnail": "website-fotos/25HS-Coding/25HSCoding-4.png",
+    "heroImage": "website-fotos/25HS-Coding/25HSCoding-4.png",
     "extraImages": [
-      "website-fotos/25HS-Coding/25HSCoding-2.png",
+      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image6.gif",
       "website-fotos/25HS-Coding/25HSCoding-3.png",
-      "website-fotos/25HS-Coding/25HSCoding-4.png",
       "website-fotos/25HS-Coding/25HSCoding-5.png",
       "website-fotos/25HS-Coding/25HSCoding-6.jpg",
       "website-fotos/25HS-Coding/25HSCoding-7.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_1.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image1.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image10.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image2.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image3.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image4.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image5.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image6.gif",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image6.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image7.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image8.png",
-      "website-fotos/25HS-Coding/GIF/25HSCoding-25Coding_image9.png"
+      "website-fotos/25HS-Coding/25HSCoding-2.png"
     ],
     "description": [
-      "Details about the 25HS-Coding project will go here."
+      "Glitchater bridges the gap between urban context and computational design. Developed for Coding Architecture I using Rhino, Grasshopper, and Python, this apartment project features a stepped, river-facing volume that responds dynamically to its industrial surroundings. Its defining feature is a playful, voxelated facade inspired by 8-bit graphics and sandbox gaming. Using algorithmic attractor points, the building’s skin maps spatial proximity to specific RGB values, generating a vibrant, glitch-like color gradient. The result is a joyful, pixelated canvas that reimagines urban architecture as an interactive digital playground."
     ],
-    "materials": "TBD",
-    "phase": "TBD",
-    "collaborator": "TBD"
+    "Semester": "1st Master semester",
+    "Course": "Coding Architecture I"
   }
 ]

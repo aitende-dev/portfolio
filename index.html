@@ -20,7 +20,7 @@
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">work</a></li>
+          <li><a href="index.html">projects</a></li>
           <li><a href="info.html">info</a></li>
           <li><a href="contact.html">contact</a></li>
         </ul>
@@ -30,11 +30,15 @@
     <main class="content">
 
       <div class="filter-menu" id="filter-menu" style="align-items: center; flex-wrap: wrap;">
-        <a href="#" data-filter="featured" class="active"><i class="fa-solid fa-star"></i><span class="filter-text">featured</span></a>
-        <a href="#" data-filter="university"><i class="fa-solid fa-building-columns"></i><span class="filter-text">university</span></a>
+        <a href="#" data-filter="featured" class="active"><i class="fa-solid fa-star"></i><span
+            class="filter-text">featured</span></a>
+        <a href="#" data-filter="university"><i class="fa-solid fa-building-columns"></i><span
+            class="filter-text">university</span></a>
         <a href="#" data-filter="work"><i class="fa-solid fa-briefcase"></i><span class="filter-text">work</span></a>
-        <a href="#" data-filter="personal"><i class="fa-solid fa-asterisk"></i><span class="filter-text">personal</span></a>
-        <a href="#" data-filter="all"><i class="fa-solid fa-layer-group"></i><span class="filter-text">all projects</span></a>
+        <a href="#" data-filter="personal"><i class="fa-solid fa-asterisk"></i><span
+            class="filter-text">personal</span></a>
+        <a href="#" data-filter="all"><i class="fa-solid fa-layer-group"></i><span class="filter-text">all
+            projects</span></a>
       </div>
 
       <div class="project-grid" id="project-grid">
@@ -93,7 +97,7 @@
           const filterValue = activeTab.getAttribute('data-filter');
           projects.forEach(project => {
             const projectCategory = project.getAttribute('data-category');
-            const categories = projectCategory ? projectCategory.split(' ') : [];
+            const categories = projectCategory ? projectCategory.split(/[\s,]+/).filter(Boolean) : [];
             if (filterValue === 'all' || categories.includes(filterValue)) {
               project.classList.remove('hidden');
             } else {
@@ -120,7 +124,7 @@
           // 3. Loop through all projects and hide/show them
           projects.forEach(project => {
             const projectCategory = project.getAttribute('data-category');
-            const categories = projectCategory ? projectCategory.split(' ') : [];
+            const categories = projectCategory ? projectCategory.split(/[\s,]+/).filter(Boolean) : [];
 
             if (filterValue === 'all' || categories.includes(filterValue)) {
               project.classList.remove('hidden'); // Show it

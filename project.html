@@ -19,7 +19,7 @@
       </div>
       <nav class="main-nav">
         <ul>
-          <li><a href="index.html">work</a></li>
+          <li><a href="index.html">projects</a></li>
           <li><a href="info.html">info</a></li>
           <li><a href="contact.html">contact</a></li>
         </ul>
@@ -99,9 +99,10 @@
               <div class="project-meta">
                 ${project.Semester ? `<p><strong>Semester:</strong> ${project.Semester}</p>` : ''}
                 ${project.Studio ? `<p><strong>Studio:</strong> ${project.Studio}</p>` : ''}
+                ${project.Course ? `<p><strong>Course:</strong> ${project.Course}</p>` : ''}
                 ${project.materials ? `<p><strong>Materials:</strong> ${project.materials}</p>` : ''}
                 ${project.phase ? `<p><strong>Phase:</strong> ${project.phase}</p>` : ''}
-                ${project.collaborator ? `<p><strong>Collaborator:</strong> ${project.collaborator}</p>` : ''}
+                ${(project.collaborator || project.Collaborator) ? `<p><strong>Collaborator:</strong> ${project.collaborator || project.Collaborator}</p>` : ''}
               </div>
               ${descriptionHtml}
             </div>
@@ -118,10 +119,12 @@
         const projectImages = Array.from(contentDiv.querySelectorAll('.project-hero img'));
         let currentImageIndex = 0;
 
+        let lightboxTimeout;
         const updateLightboxImage = () => {
           if (projectImages.length > 0) {
             lightboxImg.style.opacity = 0;
-            setTimeout(() => {
+            if (lightboxTimeout) clearTimeout(lightboxTimeout);
+            lightboxTimeout = setTimeout(() => {
               lightboxImg.src = projectImages[currentImageIndex].src;
               lightboxImg.style.opacity = 1;
             }, 150);
